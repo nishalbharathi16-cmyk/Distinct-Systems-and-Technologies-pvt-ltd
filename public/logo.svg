@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 114" width="300" height="114">
+  <defs>
+    <style>
+      .brand-title {
+        font-family: 'Arial Black', 'Inter', -apple-system, sans-serif;
+        font-size: 44px;
+        font-weight: 900;
+        letter-spacing: 0.5px;
+        fill: #FFFFFF;
+      }
+      .brand-subtitle {
+        font-family: 'Arial', 'Inter', -apple-system, sans-serif;
+        font-size: 13.8px;
+        font-weight: 800;
+        letter-spacing: 0.8px;
+        fill: #263442;
+      }
+    </style>
+  </defs>
+  <!-- Top Crimson/Red Box -->
+  <rect x="0" y="0" width="300" height="74" fill="#9E0004"/>
+  <text x="32" y="54" class="brand-title">DISTINCT</text>
+  <!-- The characteristic dot after DISTINCT -->
+  <circle cx="264" cy="51" r="5.5" fill="#E61C24"/>
+
+  <!-- Bottom Grey Box -->
+  <rect x="0" y="74" width="300" height="40" fill="#939598"/>
+  <text x="150" y="99" text-anchor="middle" class="brand-subtitle">SYSTEMS &amp; TECHNOLOGIES PVT LTD</text>
+</svg>
+
