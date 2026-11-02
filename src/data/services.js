@@ -2,90 +2,90 @@ export const SERVICES = [
   {
     id: "ai-ml",
     title: "Artificial Intelligence & Machine Learning",
-    shortDesc: "Architecting purpose-driven AI/ML models to automate workflows, extract actionable intelligence, and drive modern operational capabilities.",
-    businessValue: "Accelerates decision cycles, eliminates repetitive manual workloads, and introduces automated intelligence into mission-critical systems.",
+    shortDesc: "Custom AI/ML models and cognitive automation engineered for core business workflows.",
+    businessValue: "Automates repetitive operations and accelerates data-backed decision cycles.",
     icon: "BrainCircuit",
-    tags: ["Predictive Analytics", "Deep Learning", "Process Automation", "Algorithm Engineering"],
+    tags: ["Predictive Analytics", "Deep Learning", "Process Automation"],
     features: [
-      "Custom machine learning model architecture and training",
-      "Automated decision systems and cognitive workflow integration",
-      "Model governance, pipeline reproducibility, and inference scaling",
-      "Computer vision and natural language processing solutions"
+      "Custom predictive model development",
+      "Cognitive process automation",
+      "Model governance and inference pipelines",
+      "Computer vision & NLP integration"
     ],
     cta: "Consult on AI/ML Strategy"
   },
   {
     id: "data-science",
     title: "Data Science & Advanced Analytics",
-    shortDesc: "Transforming disparate operational datasets into unified, high-integrity analytical assets for rigorous business intelligence and forecasting.",
-    businessValue: "Equips leadership with predictive clarity, identifies margin efficiencies, and grounds strategic roadmaps in statistical confidence.",
+    shortDesc: "Transforming raw business telemetry into unified analytics, predictive models, and executive dashboards.",
+    businessValue: "Delivers strategic clarity, margin optimization, and empirical forecasting.",
     icon: "BarChart3",
-    tags: ["Data Architecture", "Predictive Modeling", "BI Dashboards", "Statistical Analysis"],
+    tags: ["Data Architecture", "BI Dashboards", "Statistical Modeling"],
     features: [
-      "Enterprise data warehousing and telemetry ingestion pipelines",
-      "Exploratory data discovery and multi-dimensional trend modeling",
-      "Executive visual reporting and operational KPI dashboards",
-      "Data governance and pipeline hygiene standards"
+      "Enterprise data warehousing & pipelines",
+      "Predictive modeling & statistical analysis",
+      "Executive KPI cockpits & visual dashboards",
+      "Data hygiene & governance frameworks"
     ],
     cta: "Explore Data Science Services"
   },
   {
     id: "tech-consulting",
     title: "Technology Consulting",
-    shortDesc: "Delivering objective architectural leadership, modern technology roadmapping, and system modernization strategies tailored to business goals.",
-    businessValue: "Mitigates deployment risks, optimizes technical debt, and aligns IT investments directly with measurable business outcomes.",
+    shortDesc: "Strategic architecture leadership, modernization blueprints, and technology roadmapping.",
+    businessValue: "Mitigates deployment risks, reduces technical debt, and aligns IT with business goals.",
     icon: "Compass",
-    tags: ["Architecture Design", "Digital Roadmaps", "Cloud Strategy", "Modernization"],
+    tags: ["Architecture Design", "Cloud Strategy", "Modernization"],
     features: [
-      "Comprehensive IT capability assessment and gap analysis",
-      "Microservices, cloud-native, and hybrid infrastructure blueprints",
-      "Technology vendor evaluation and compliance risk audits",
-      "Digital transformation milestones and roadmap execution"
+      "IT capability audits & gap analyses",
+      "Cloud-native & hybrid infrastructure design",
+      "Technology vendor & compliance evaluation",
+      "Phased transformation roadmaps"
     ],
     cta: "Schedule an Advisory Session"
   },
   {
     id: "staff-augmentation",
     title: "Staff Augmentation & Specialized Talent",
-    shortDesc: "Providing vetted, high-performing software engineers, data scientists, and SAP specialists to scale technical capacity on demand.",
-    businessValue: "Closes acute skill shortages rapidly, shortens sprint delivery timelines, and avoids overhead friction from prolonged hiring cycles.",
+    shortDesc: "Vetted software engineers, data scientists, and SAP consultants to scale project velocity on demand.",
+    businessValue: "Closes critical skill gaps rapidly without long-term hiring overhead.",
     icon: "Users2",
-    tags: ["Specialized Talent", "SAP Experts", "Full-Stack Engineers", "On-Demand Scaling"],
+    tags: ["Specialized Talent", "SAP Experts", "On-Demand Scaling"],
     features: [
-      "Pre-screened senior engineers, cloud architects, and data scientists",
-      "Certified SAP implementation and maintenance subject-matter experts",
-      "Frictionless onboarding aligned with your agile sprints and workflows",
-      "Flexible engagement models: project-based, dedicated, or blended pods"
+      "Pre-vetted senior engineers & architects",
+      "Certified SAP implementation specialists",
+      "Frictionless agile sprint onboarding",
+      "Flexible engagement models"
     ],
     cta: "Request Technical Profiles"
   },
   {
     id: "sap-implementation",
     title: "SAP Implementation & S/4HANA Migration",
-    shortDesc: "Executing end-to-end enterprise resource planning implementations and phased transitions to SAP S/4HANA with operational continuity.",
-    businessValue: "Standardizes disparate business processes, enhances financial visibility, and builds a dependable operational backbone.",
+    shortDesc: "End-to-end ERP implementations and seamless migrations to SAP S/4HANA.",
+    businessValue: "Standardizes operations, boosts financial clarity, and establishes a resilient digital core.",
     icon: "Layers",
-    tags: ["SAP S/4HANA", "Greenfield / Brownfield", "ERP Modernization", "Data Migration"],
+    tags: ["SAP S/4HANA", "ERP Modernization", "Data Migration"],
     features: [
-      "Process scoping, blueprinting, and solution architecture design",
-      "Legacy ERP migration to modern SAP S/4HANA environments",
-      "Custom ABAP and enterprise module configuration (FICO, MM, SD, PP)",
-      "User acceptance testing, data reconciliation, and cutover execution"
+      "Scoping, blueprinting & architecture",
+      "Legacy ERP to SAP S/4HANA migration",
+      "Custom ABAP & module setup (FICO, MM, SD, PP)",
+      "Rigorous cutover & UAT execution"
     ],
     cta: "Plan Your SAP Implementation"
   },
   {
     id: "sap-support",
     title: "SAP Support Services & Maintenance",
-    shortDesc: "Delivering proactive Level 2 and Level 3 functional support, performance monitoring, routine maintenance, and continuous optimization.",
-    businessValue: "Minimizes system downtime, ensures operational compliance, and protects long-term investments in enterprise software.",
+    shortDesc: "Proactive Level 2 and Level 3 functional maintenance, health audits, and continuous optimization.",
+    businessValue: "Ensures maximum system uptime, regulatory compliance, and ERP investment protection.",
     icon: "ShieldCheck",
-    tags: ["L2/L3 Support", "System Health Checks", "SLA-Driven Resolution", "Patch Management"],
+    tags: ["L2/L3 Support", "SLA Resolution", "Patch Management"],
     features: [
-      "Dedicated incident management and ticket resolution based on rigorous SLAs",
-      "Routine system housekeeping, database optimization, and performance audits",
-      "Enhancement packs, security patch application, and minor upgrades",
-      "End-user enablement, ticket trend analysis, and process tuning"
+      "SLA-governed incident resolution",
+      "Database health & performance tuning",
+      "Security patches & transport management",
+      "User enablement & continuous process tuning"
     ],
     cta: "Inquire About SAP Support SLAs"
   }
@@ -96,66 +96,66 @@ export const SOLUTIONS = [
     id: "intelligent-tech",
     title: "Intelligent Technology Solutions",
     category: "Automation & Cognitive Systems",
-    summary: "Embed algorithmic intelligence directly into foundational business workflows, turning manual bottlenecks into automated, self-refining processes.",
+    summary: "Embed AI and automated intelligence directly into business operations to eliminate manual bottlenecks.",
     capabilities: [
-      "Contextual recommendation and prediction engines",
-      "Intelligent document understanding and data extraction",
-      "Automated telemetry anomaly detection and response",
-      "Algorithmic queue management and automated scheduling"
+      "Predictive recommendation engines",
+      "Intelligent document understanding",
+      "Automated anomaly detection",
+      "Algorithmic scheduling & routing"
     ],
-    impact: "Drives measurable reductions in processing lead times while boosting precision across recurring administrative and operational tasks."
+    impact: "Dramatically reduces cycle times while increasing operational accuracy."
   },
   {
     id: "enterprise-solutions",
     title: "Enterprise Solutions & Core Modernization",
     category: "ERP & Infrastructure",
-    summary: "Integrate ERP backbones, streamline supply chain touchpoints, and eliminate legacy architectural fragmentation across business units.",
+    summary: "Unify ERP systems, harmonize cross-department workflows, and eliminate fragmented architectures.",
     capabilities: [
-      "SAP S/4HANA core deployment and modular process harmony",
-      "Cross-departmental transactional synchronization",
-      "Master data management and unified source-of-truth frameworks",
-      "Enterprise security, role-based governance, and access controls"
+      "SAP S/4HANA digital core deployment",
+      "Cross-department data synchronization",
+      "Unified master data management",
+      "Enterprise role-based security"
     ],
-    impact: "Unifies disparate organizational units under a single, dependable operational standard with granular oversight."
+    impact: "Unifies operations under a single dependable standard with real-time visibility."
   },
   {
     id: "data-driven",
     title: "Data-Driven Intelligence Solutions",
     category: "Analytics & Strategy",
-    summary: "Transform siloed databases into structured analytics warehouses with interactive executive cockpits and predictive forecasting models.",
+    summary: "Convert disparate databases into centralized warehouses with real-time executive cockpits.",
     capabilities: [
-      "Real-time streaming and batch ingestion infrastructure",
-      "Predictive demand forecasting and churn prevention models",
-      "Automated regulatory reporting and financial data validation",
-      "Custom role-tailored dashboard engineering"
+      "Streaming & batch ingestion pipelines",
+      "Demand forecasting & churn mitigation",
+      "Automated compliance reporting",
+      "Custom analytics dashboards"
     ],
-    impact: "Replaces guesswork with empirical clarity, enabling leadership to pivot resources toward the most profitable and resilient growth channels."
+    impact: "Replaces guesswork with empirical metrics to guide critical investments."
   },
   {
     id: "digital-transformation",
     title: "Digital Transformation & Cloud Adoption",
     category: "Modernization",
-    summary: "Modernize legacy application architectures into modular, cloud-resilient, containerized environments designed for agility.",
+    summary: "Modernize legacy platforms into modular, cloud-resilient environments designed for scale.",
     capabilities: [
-      "Monolith to distributed services re-architecting",
-      "Cloud migration frameworks with minimal business disruption",
-      "API gateway design and partner integration protocols",
-      "CI/CD deployment pipelines and automated testing practices"
+      "Microservices & distributed architecture",
+      "Zero-disruption cloud migration",
+      "API gateway & integration protocols",
+      "Automated CI/CD deployment pipelines"
     ],
-    impact: "Shortens time-to-market for new enterprise capabilities while establishing robust disaster recovery and elastic scaling."
+    impact: "Accelerates time-to-market for new capabilities with high system resilience."
   },
   {
     id: "tech-integration",
     title: "Technology Integration & IoT Connectivity",
     category: "Systems Integration",
-    summary: "Bridge physical operational sensors, edge devices, and enterprise business software into a continuous, real-time feedback loop.",
+    summary: "Bridge physical sensors, connected hardware, and enterprise software into a unified feedback loop.",
     capabilities: [
-      "Industrial IoT telemetry ingestion and edge parsing",
-      "Blockchain-based immutable audit trails and ledger verification",
-      "Middleware engineering for legacy-to-modern bridge protocols",
-      "Secure webhook and event-driven architecture pipelines"
+      "Industrial IoT telemetry ingestion",
+      "Blockchain-based immutable ledgers",
+      "Legacy-to-modern bridge middleware",
+      "Event-driven webhook pipelines"
     ],
-    impact: "Provides instant transparency into asset health, field inventory, and transactional audit trails without manual check-ins."
+    impact: "Gives immediate visibility into asset health, field inventory, and operational metrics."
   }
 ];
 
@@ -163,74 +163,73 @@ export const INDUSTRIES = [
   {
     id: "manufacturing",
     name: "Manufacturing & Industrial Operations",
-    summary: "Potential application areas include smart factory telematics, predictive equipment maintenance, inventory synchronization, and shop floor ERP optimization.",
+    summary: "Predictive equipment maintenance, smart telemetry, and shop floor ERP alignment.",
     applications: [
-      "Predictive machinery diagnostics via IoT sensor monitoring",
-      "SAP S/4HANA production planning (PP) and materials management (MM)",
-      "Automated quality inspection with visual classification models",
-      "End-to-end supply chain trace and consignment tracking"
+      "Predictive diagnostics via IoT sensors",
+      "SAP S/4HANA production planning (PP & MM)",
+      "Automated visual quality inspection",
+      "End-to-end consignment tracking"
     ],
     disclaimer: "Representative industry vertical mapping based on Distinct's architectural capabilities. Specific engagements are evaluated per client requirements."
   },
   {
     id: "healthcare",
     name: "Healthcare & Life Sciences",
-    summary: "Application scenarios focus on data interoperability, compliance governance, clinical workflow analytics, and secure administrative automation.",
+    summary: "Data interoperability, compliant analytics, and secure administrative automation.",
     applications: [
-      "Anonymized medical data analysis and diagnostic triage assistance",
-      "Healthcare supply inventory and pharmaceutical chain tracing",
-      "Staff scheduling optimization and bed occupancy prediction",
-      "HIPAA/regulatory compliant data integration pipelines"
+      "Clinical workflow & diagnostic data analysis",
+      "Pharmaceutical supply chain tracking",
+      "Staff scheduling & bed occupancy forecasting",
+      "HIPAA-aligned data pipelines"
     ],
     disclaimer: "Representative industry vertical mapping based on Distinct's architectural capabilities. Specific engagements are evaluated per client requirements."
   },
   {
     id: "finance",
     name: "Financial Services & Banking",
-    summary: "Use cases include algorithmic anomaly detection, risk modeling, core ledger modernization, and secure audit automation.",
+    summary: "Algorithmic anomaly detection, risk modeling, and core ledger modernization.",
     applications: [
-      "Real-time fraud scoring and transaction monitoring pipelines",
-      "Credit risk assessment models using multi-source statistical data",
-      "Automated compliance documentation and audit log verification",
-      "SAP FICO modernization and automated reconciliation engines"
+      "Real-time fraud scoring pipelines",
+      "Multi-source credit risk modeling",
+      "Automated compliance documentation",
+      "SAP FICO modernization"
     ],
     disclaimer: "Representative industry vertical mapping based on Distinct's architectural capabilities. Specific engagements are evaluated per client requirements."
   },
   {
     id: "retail",
     name: "Retail & Consumer Commerce",
-    summary: "Focus areas encompass unified omnichannel inventory, customer demand forecasting, dynamic pricing models, and warehouse automation.",
+    summary: "Omnichannel inventory sync, dynamic demand forecasting, and warehouse automation.",
     applications: [
-      "Machine learning demand forecasting to minimize overstock and stockouts",
-      "Personalized recommendation engines and churn mitigation algorithms",
-      "Multi-channel inventory synchronization across points-of-sale",
-      "Supplier ledger integration and automated purchase order generation"
+      "ML-based demand forecasting",
+      "Personalized recommendation engines",
+      "Multi-channel POS inventory sync",
+      "Automated purchase order workflows"
     ],
     disclaimer: "Representative industry vertical mapping based on Distinct's architectural capabilities. Specific engagements are evaluated per client requirements."
   },
   {
     id: "logistics",
     name: "Logistics & Supply Chain",
-    summary: "Solutions target fleet telematics, automated routing optimization, freight tracking, and warehouse process automation.",
+    summary: "Fleet telematics, dynamic route optimization, and automated dispatch tracking.",
     applications: [
-      "Dynamic route optimization considering traffic, cargo weight, and fuel",
-      "Warehouse stock location algorithms and automated replenishment",
-      "Smart contract-based bill-of-lading verification using distributed ledgers",
-      "Fleet telemetry ingestion and preventive vehicle servicing alerts"
+      "Dynamic route & fuel optimization",
+      "Warehouse stock location algorithms",
+      "Smart contract bill-of-lading verification",
+      "Predictive vehicle fleet maintenance"
     ],
     disclaimer: "Representative industry vertical mapping based on Distinct's architectural capabilities. Specific engagements are evaluated per client requirements."
   },
   {
     id: "enterprise",
     name: "Enterprise Businesses & Conglomerates",
-    summary: "Holistic enterprise technology consolidation, ERP harmonization across global subsidies, and cross-functional workflow automation.",
+    summary: "Multi-entity ERP harmonization, IT staff augmentation, and centralized oversight.",
     applications: [
-      "Multi-entity SAP ERP harmonization and unified financial reporting",
-      "Staff augmentation for rapid sprint scaling and IT turnaround",
-      "Internal knowledge base and contextual search intelligence",
-      "Executive management dashboards with multi-currency consolidation"
+      "Multi-subsidiary SAP ERP harmonization",
+      "Dedicated technical staff augmentation",
+      "Internal knowledge base intelligence",
+      "Executive multi-currency dashboards"
     ],
     disclaimer: "Representative industry vertical mapping based on Distinct's architectural capabilities. Specific engagements are evaluated per client requirements."
   }
 ];
-

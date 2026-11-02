@@ -25,35 +25,33 @@ import Button from '../components/Button';
 export const Home = () => {
   return (
     <div className="space-y-0">
-      {/* 1. HERO SECTION */}
-      <section className="relative overflow-hidden bg-white border-b border-slate-100 py-16 sm:py-24 lg:py-28">
-        {/* Subtle corporate grid background */}
+      {/* 1. HERO SECTION WITH BACKGROUND IMAGE */}
+      <section className="relative overflow-hidden bg-[#17365D] text-white py-16 sm:py-24 lg:py-28">
+        {/* Background Photo with Corporate Navy Gradient Overlay */}
         <div 
-          className="absolute inset-0 opacity-[0.03] pointer-events-none"
-          style={{
-            backgroundImage: `radial-gradient(#17365D 1px, transparent 1px)`,
-            backgroundSize: '24px 24px'
-          }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url('/hero-bg.jpg')` }}
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/90 to-[#0d2138]/85 backdrop-blur-[1px]" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             
             {/* Left Content Column */}
-            <div className="lg:col-span-7 space-y-6 sm:space-y-8">
+            <div className="lg:col-span-7 space-y-6">
               {/* Trust Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F2F5F7] border border-slate-200 text-xs sm:text-sm font-medium text-[#17365D]">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs sm:text-sm font-medium text-slate-200">
                 <span className="w-2 h-2 rounded-full bg-[#267C78]" />
-                <span>Enterprise IT Consulting & Digital Technology • Founded 2019</span>
+                <span>Enterprise IT Consulting & Digital Tech • Est. 2019</span>
               </div>
 
               {/* Exact Hero Headline */}
-              <h1 className="text-3xl sm:text-5xl lg:text-5xl font-extrabold text-[#17365D] tracking-tight leading-[1.15]">
+              <h1 className="text-3xl sm:text-5xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
                 Engineering Intelligent Solutions for a Connected Future.
               </h1>
 
               {/* Exact Hero Supporting Text */}
-              <p className="text-lg sm:text-xl text-[#263442]/85 leading-relaxed max-w-2xl">
+              <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl">
                 Empowering businesses through intelligent technology, enterprise solutions, and digital innovation.
               </p>
 
@@ -62,91 +60,91 @@ export const Home = () => {
                 <Button to="/services" variant="primary" size="lg" icon={ArrowRight}>
                   Explore Our Services
                 </Button>
-                <Button to="/contact" variant="outline" size="lg">
+                <Button to="/contact" variant="outlineWhite" size="lg">
                   Contact Us
                 </Button>
               </div>
 
               {/* Trust highlights bar */}
-              <div className="pt-6 border-t border-slate-200/80 grid grid-cols-3 gap-4 text-left">
+              <div className="pt-6 border-t border-white/15 grid grid-cols-3 gap-4 text-left">
                 <div>
-                  <span className="block text-xl sm:text-2xl font-bold text-[#17365D]">2019</span>
-                  <span className="text-xs sm:text-sm text-[#263442]/70">Founded in Chennai</span>
+                  <span className="block text-xl sm:text-2xl font-bold text-white">2019</span>
+                  <span className="text-xs text-slate-300">Founded in Chennai</span>
                 </div>
                 <div>
                   <span className="block text-xl sm:text-2xl font-bold text-[#267C78]">SAP S/4HANA</span>
-                  <span className="text-xs sm:text-sm text-[#263442]/70">Core Practice</span>
+                  <span className="text-xs text-slate-300">Core Practice</span>
                 </div>
                 <div>
-                  <span className="block text-xl sm:text-2xl font-bold text-[#17365D]">AI & ML</span>
-                  <span className="text-xs sm:text-sm text-[#263442]/70">Digital Solutions</span>
+                  <span className="block text-xl sm:text-2xl font-bold text-white">AI & ML</span>
+                  <span className="text-xs text-slate-300">Digital Solutions</span>
                 </div>
               </div>
             </div>
 
             {/* Right Graphic: Enterprise Systems Architecture Visual */}
             <div className="lg:col-span-5">
-              <div className="relative mx-auto max-w-md lg:max-w-none bg-[#F2F5F7] rounded-xl border border-slate-200/80 p-6 sm:p-8 shadow-card">
+              <div className="relative mx-auto max-w-md lg:max-w-none bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-6 sm:p-7 shadow-2xl">
                 
                 {/* Header card pill */}
-                <div className="flex items-center justify-between pb-4 border-b border-slate-200">
+                <div className="flex items-center justify-between pb-3.5 border-b border-white/15">
                   <div className="flex items-center gap-2.5">
-                    <div className="w-3 h-3 rounded-full bg-[#17365D]" />
-                    <span className="text-xs font-bold text-[#17365D] uppercase tracking-wider">
-                      Enterprise Technology Architecture
+                    <div className="w-2.5 h-2.5 rounded-full bg-[#267C78]" />
+                    <span className="text-xs font-bold text-white uppercase tracking-wider">
+                      Enterprise Architecture
                     </span>
                   </div>
-                  <span className="text-[11px] font-semibold text-[#267C78] bg-[#267C78]/10 px-2 py-0.5 rounded">
-                    Unified Framework
+                  <span className="text-[11px] font-semibold text-white bg-[#267C78] px-2 py-0.5 rounded">
+                    Active Stack
                   </span>
                 </div>
 
                 {/* Layered architectural representation */}
-                <div className="space-y-3.5 my-6">
+                <div className="space-y-3 my-5">
                   {/* Layer 1: Intelligence */}
-                  <div className="bg-white rounded-lg p-4 border border-slate-200 shadow-subtle flex items-start gap-3.5">
+                  <div className="bg-white/95 text-[#263442] rounded-lg p-3.5 shadow-sm flex items-start gap-3">
                     <div className="p-2 rounded bg-[#267C78]/10 text-[#267C78] shrink-0 mt-0.5">
-                      <Cpu className="w-5 h-5" />
+                      <Cpu className="w-4 h-4" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-[#17365D]">Applied AI & Data Science Layer</h4>
+                      <h4 className="text-sm font-bold text-[#17365D]">AI & Data Science</h4>
                       <p className="text-xs text-[#263442]/80 mt-0.5">
-                        Predictive algorithms, intelligent process automation, and statistical telemetry models.
+                        Predictive algorithms and automated decision pipelines.
                       </p>
                     </div>
                   </div>
 
                   {/* Layer 2: ERP Backbone */}
-                  <div className="bg-white rounded-lg p-4 border border-slate-200 shadow-subtle flex items-start gap-3.5">
+                  <div className="bg-white/95 text-[#263442] rounded-lg p-3.5 shadow-sm flex items-start gap-3">
                     <div className="p-2 rounded bg-[#17365D]/10 text-[#17365D] shrink-0 mt-0.5">
-                      <Layers className="w-5 h-5" />
+                      <Layers className="w-4 h-4" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-[#17365D]">SAP S/4HANA & Enterprise ERP</h4>
+                      <h4 className="text-sm font-bold text-[#17365D]">SAP S/4HANA & ERP</h4>
                       <p className="text-xs text-[#263442]/80 mt-0.5">
-                        End-to-end implementation, financial consolidation, materials management, and SLA support.
+                        Core implementation, migration, and SLA maintenance.
                       </p>
                     </div>
                   </div>
 
                   {/* Layer 3: Integration & Talent */}
-                  <div className="bg-white rounded-lg p-4 border border-slate-200 shadow-subtle flex items-start gap-3.5">
+                  <div className="bg-white/95 text-[#263442] rounded-lg p-3.5 shadow-sm flex items-start gap-3">
                     <div className="p-2 rounded bg-slate-100 text-[#263442] shrink-0 mt-0.5">
-                      <Users2 className="w-5 h-5" />
+                      <Users2 className="w-4 h-4" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-[#17365D]">Technology Consulting & Specialized Staffing</h4>
+                      <h4 className="text-sm font-bold text-[#17365D]">Consulting & Staffing</h4>
                       <p className="text-xs text-[#263442]/80 mt-0.5">
-                        Strategic architectural guidance and on-demand engineering pods to accelerate project velocity.
+                        Strategic tech advisory and on-demand engineering pods.
                       </p>
                     </div>
                   </div>
                 </div>
 
                 {/* Footer status notice */}
-                <div className="pt-3 border-t border-slate-200/80 flex items-center justify-between text-xs text-[#263442]/70">
-                  <span>Architecture Standard: High Availability</span>
-                  <span className="font-medium text-[#17365D]">Chennai, TN, India</span>
+                <div className="pt-3 border-t border-white/15 flex items-center justify-between text-xs text-slate-300">
+                  <span>Chennai, Tamil Nadu, India</span>
+                  <span className="font-semibold text-white">Verified Practice</span>
                 </div>
               </div>
             </div>
@@ -156,32 +154,32 @@ export const Home = () => {
       </section>
 
       {/* 2. COMPANY INTRODUCTION / VERIFIED PROFILE */}
-      <section className="py-16 bg-[#F2F5F7]">
+      <section className="py-14 bg-[#F2F5F7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-xl border border-slate-200/80 p-8 sm:p-10 shadow-card">
+          <div className="bg-white rounded-xl border border-slate-200/80 p-6 sm:p-8 shadow-card">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-8 space-y-4">
+              <div className="lg:col-span-8 space-y-3">
                 <span className="text-xs font-bold uppercase tracking-wider text-[#267C78]">
-                  Corporate Introduction
+                  Company Profile
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#17365D]">
                   Distinct Systems & Technologies Pvt. Ltd.
                 </h2>
-                <p className="text-base sm:text-lg text-[#263442] leading-relaxed">
+                <p className="text-base text-[#263442] leading-relaxed">
                   {COMPANY_INFO.description}
                 </p>
-                <p className="text-sm text-[#263442]/80 leading-relaxed">
-                  Founded in 2019 in Chennai, Tamil Nadu, Distinct Systems was established to help enterprise organizations bridge the gap between strategic technology vision and dependable on-the-ground operational execution.
+                <p className="text-sm text-[#263442]/75">
+                  Founded in 2019 in Chennai, we bridge the gap between high-level technology strategy and reliable operational execution.
                 </p>
               </div>
 
-              <div className="lg:col-span-4 bg-[#F2F5F7] rounded-lg p-6 border border-slate-200 space-y-3.5">
+              <div className="lg:col-span-4 bg-[#F2F5F7] rounded-lg p-5 border border-slate-200 space-y-2.5">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-[#17365D]">
-                  Verified Corporate Details
+                  Corporate Details
                 </h4>
-                <div className="space-y-2 text-xs text-[#263442]">
+                <div className="space-y-1.5 text-xs text-[#263442]">
                   <div className="flex justify-between py-1 border-b border-slate-200">
-                    <span className="text-slate-500">Legal Entity:</span>
+                    <span className="text-slate-500">Entity:</span>
                     <span className="font-semibold text-right">Private Limited</span>
                   </div>
                   <div className="flex justify-between py-1 border-b border-slate-200">
@@ -189,11 +187,11 @@ export const Home = () => {
                     <span className="font-semibold text-right">Chennai, Tamil Nadu</span>
                   </div>
                   <div className="flex justify-between py-1 border-b border-slate-200">
-                    <span className="text-slate-500">Incorporation:</span>
+                    <span className="text-slate-500">Founded:</span>
                     <span className="font-semibold text-right">March 2019</span>
                   </div>
                   <div className="flex justify-between py-1">
-                    <span className="text-slate-500">Official Portal:</span>
+                    <span className="text-slate-500">Domain:</span>
                     <span className="font-semibold text-right text-[#267C78]">distinctsystems.in</span>
                   </div>
                 </div>
@@ -203,29 +201,29 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* 3. CORE TECHNOLOGY EXPERTISE (All 10 Areas) */}
-      <section className="py-20 bg-white">
+      {/* 3. CORE TECHNOLOGY EXPERTISE */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Core Competencies"
             title="Comprehensive Technology Capabilities"
-            description="Our specialized expertise spans next-generation intelligent algorithms, robust enterprise systems, and scalable technical advisory."
+            description="Specialized enterprise expertise across next-generation intelligence, ERP backbones, and technical advisory."
           />
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5">
             {COMPANY_INFO.expertise.map((item, idx) => (
               <div 
                 key={idx}
-                className="bg-[#F2F5F7] rounded-lg p-5 border border-slate-200/80 hover:border-[#17365D]/40 hover:bg-white hover:shadow-card transition-all duration-200 group flex flex-col justify-between"
+                className="bg-[#F2F5F7] rounded-lg p-4 border border-slate-200/80 hover:border-[#17365D]/40 hover:bg-white hover:shadow-card transition-all group flex flex-col justify-between"
               >
-                <div className="w-8 h-8 rounded bg-white text-[#267C78] group-hover:bg-[#17365D] group-hover:text-white flex items-center justify-center mb-3 transition-colors">
-                  <CheckCircle2 className="w-4 h-4" />
+                <div className="w-7 h-7 rounded bg-white text-[#267C78] group-hover:bg-[#17365D] group-hover:text-white flex items-center justify-center mb-2.5 transition-colors">
+                  <CheckCircle2 className="w-3.5 h-3.5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-[#17365D] group-hover:text-[#267C78] transition-colors leading-snug">
+                  <h4 className="text-xs sm:text-sm font-semibold text-[#17365D] group-hover:text-[#267C78] transition-colors leading-snug">
                     {item}
                   </h4>
-                  <span className="block text-[11px] text-[#263442]/60 mt-1">Verified Practice</span>
+                  <span className="block text-[10px] text-[#263442]/60 mt-1">Verified Practice</span>
                 </div>
               </div>
             ))}
@@ -234,15 +232,15 @@ export const Home = () => {
       </section>
 
       {/* 4. SERVICES OVERVIEW */}
-      <section className="py-20 bg-[#F2F5F7]">
+      <section className="py-16 bg-[#F2F5F7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="Specialized Services"
+            eyebrow="Services"
             title="Engineered for Scalable Enterprise Value"
-            description="Discover how our structured technology services deliver strategic outcomes across development, modernization, and business operations."
+            description="Explore our specialized services across AI/ML development, modern architecture, and SAP support."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.map((service, index) => (
               <ServiceCard 
                 key={service.id} 
@@ -252,91 +250,90 @@ export const Home = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Button to="/services" variant="navy" size="lg" icon={ArrowRight}>
-              View Comprehensive Services Directory
+          <div className="text-center mt-10">
+            <Button to="/services" variant="navy" size="md" icon={ArrowRight}>
+              View All Services
             </Button>
           </div>
         </div>
       </section>
 
       {/* 5. SAP S/4HANA HIGHLIGHT */}
-      <section className="py-20 bg-[#17365D] text-white relative overflow-hidden">
+      <section className="py-16 bg-[#17365D] text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-7 space-y-4">
               <span className="text-xs font-bold tracking-widest uppercase text-[#267C78] px-3 py-1 rounded bg-white/10 inline-block">
-                Enterprise Core Competency
+                Enterprise Core Practice
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
                 Enterprise Resource Modernization with SAP S/4HANA
               </h2>
-              <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-                Distinct Systems provides enterprise-grade SAP S/4HANA implementation and functional support services designed to integrate core business operations with absolute transparency, data integrity, and compliance.
+              <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+                We deliver end-to-end SAP S/4HANA implementations, smooth ERP migrations, and SLA-governed support.
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                <div className="bg-white/5 p-4 rounded-lg border border-white/10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                <div className="bg-white/5 p-3.5 rounded-lg border border-white/10">
                   <h4 className="font-semibold text-white text-sm mb-1">Implementation & Migration</h4>
                   <p className="text-xs text-slate-300">
-                    Phased rollout, legacy migration, architecture validation, and zero-business-disruption cutover protocols.
+                    Phased rollouts with zero business disruption.
                   </p>
                 </div>
-                <div className="bg-white/5 p-4 rounded-lg border border-white/10">
+                <div className="bg-white/5 p-3.5 rounded-lg border border-white/10">
                   <h4 className="font-semibold text-white text-sm mb-1">L2/L3 Operational Support</h4>
                   <p className="text-xs text-slate-300">
-                    SLA-governed incident resolution, performance tuning, routine patch application, and user enablement.
+                    SLA-governed incident resolution and routine tuning.
                   </p>
                 </div>
               </div>
 
-              <div className="pt-4 flex flex-wrap gap-4">
+              <div className="pt-2 flex flex-wrap gap-3">
                 <Button to="/sap-solutions" variant="primary" size="md" icon={ArrowRight}>
                   Explore SAP Practice
                 </Button>
                 <Button to="/contact" variant="outlineWhite" size="md">
-                  Discuss SAP Support SLAs
+                  Discuss SAP Support
                 </Button>
               </div>
             </div>
 
             <div className="lg:col-span-5">
-              <div className="bg-white text-[#263442] rounded-xl p-8 shadow-2xl border border-white/20 space-y-6">
-                <div className="flex items-center justify-between pb-4 border-b border-slate-100">
-                  <h4 className="text-base font-bold text-[#17365D]">SAP Engagement Highlights</h4>
-                  <span className="text-xs font-semibold px-2.5 py-1 rounded bg-[#267C78]/10 text-[#267C78]">
+              <div className="bg-white text-[#263442] rounded-xl p-6 shadow-xl border border-white/20 space-y-4">
+                <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+                  <h4 className="text-sm font-bold text-[#17365D]">SAP Highlights</h4>
+                  <span className="text-xs font-semibold px-2 py-0.5 rounded bg-[#267C78]/10 text-[#267C78]">
                     Active Practice
                   </span>
                 </div>
 
-                <div className="space-y-3 text-sm">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#267C78] shrink-0 mt-0.5" />
+                <div className="space-y-2.5 text-xs">
+                  <div className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#267C78] shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-semibold text-[#17365D]">End-to-End Delivery:</span>
-                      <p className="text-xs text-slate-600 mt-0.5">Scoping, blueprinting, configuration, testing, and go-live.</p>
+                      <span className="font-bold text-[#17365D]">End-to-End Delivery:</span>
+                      <p className="text-slate-600">Scoping, configuration, testing, and go-live.</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#267C78] shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#267C78] shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-semibold text-[#17365D]">Specialized Augmentation:</span>
-                      <p className="text-xs text-slate-600 mt-0.5">Subject-matter experts across core ERP and analytical modules.</p>
+                      <span className="font-bold text-[#17365D]">Talent Augmentation:</span>
+                      <p className="text-slate-600">Certified consultants across FICO, MM, SD, and PP.</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#267C78] shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#267C78] shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-semibold text-[#17365D]">Rigorous SLA Governance:</span>
-                      <p className="text-xs text-slate-600 mt-0.5">Measurable uptime standards and transparent ticket handling.</p>
+                      <span className="font-bold text-[#17365D]">SLA Governance:</span>
+                      <p className="text-slate-600">Clear response tiers and system health monitoring.</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-[#F2F5F7] p-3 rounded text-xs text-[#263442]/80 border-l-2 border-[#17365D]">
-                  <span className="font-semibold text-[#17365D] block mb-0.5">Verified Corporate Capability</span>
-                  Distinct Systems maintains dedicated expertise across SAP implementation and technical support services.
+                <div className="bg-[#F2F5F7] p-2.5 rounded text-[11px] text-[#263442]/80 border-l-2 border-[#17365D]">
+                  Dedicated in-house practice for enterprise SAP implementations.
                 </div>
               </div>
             </div>
@@ -346,32 +343,32 @@ export const Home = () => {
       </section>
 
       {/* 6. TECHNOLOGY SOLUTIONS */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="Enterprise Solutions"
+            eyebrow="Solutions"
             title="Strategic Architecture for Complex Challenges"
-            description="Our solutions bring together data engineering, algorithm development, and enterprise resource governance into cohesive systems."
+            description="Our solutions bring together data engineering, predictive algorithms, and enterprise systems."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {SOLUTIONS.slice(0, 3).map((sol) => (
               <div 
                 key={sol.id} 
-                className="bg-[#F2F5F7] rounded-lg p-6 sm:p-8 border border-slate-200/80 hover:border-[#17365D]/30 transition-all shadow-subtle flex flex-col justify-between"
+                className="bg-[#F2F5F7] rounded-lg p-6 border border-slate-200/80 hover:border-[#17365D]/30 transition-all shadow-subtle flex flex-col justify-between"
               >
                 <div>
-                  <span className="text-xs font-semibold text-[#267C78] uppercase tracking-wider block mb-2">
+                  <span className="text-xs font-semibold text-[#267C78] uppercase tracking-wider block mb-1.5">
                     {sol.category}
                   </span>
-                  <h3 className="text-xl font-bold text-[#17365D] mb-3">
+                  <h3 className="text-lg font-bold text-[#17365D] mb-2">
                     {sol.title}
                   </h3>
-                  <p className="text-sm text-[#263442]/85 leading-relaxed mb-6">
+                  <p className="text-xs sm:text-sm text-[#263442]/85 leading-relaxed mb-4">
                     {sol.summary}
                   </p>
                   
-                  <div className="space-y-2 mb-6">
+                  <div className="space-y-1.5 mb-5">
                     {sol.capabilities.slice(0, 3).map((cap, i) => (
                       <div key={i} className="flex items-start gap-2 text-xs text-[#263442]">
                         <div className="w-1.5 h-1.5 rounded-full bg-[#267C78] shrink-0 mt-1.5" />
@@ -381,12 +378,12 @@ export const Home = () => {
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-slate-200">
+                <div className="pt-3 border-t border-slate-200">
                   <Link
                     to="/solutions"
                     className="text-xs font-bold text-[#17365D] hover:text-[#267C78] inline-flex items-center gap-1"
                   >
-                    <span>Explore Solution Architecture</span>
+                    <span>View Architecture</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
@@ -394,61 +391,61 @@ export const Home = () => {
             ))}
           </div>
 
-          <div className="text-center mt-10">
+          <div className="text-center mt-8">
             <Button to="/solutions" variant="outline" size="md">
-              View All Five Solution Portfolios
+              View All 5 Solution Frameworks
             </Button>
           </div>
         </div>
       </section>
 
       {/* 7. WHY CHOOSE DISTINCT SYSTEMS */}
-      <section className="py-20 bg-[#F2F5F7]">
+      <section className="py-16 bg-[#F2F5F7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="Why Distinct Systems"
-            title="A Pragmatic, Business-First Technology Partner"
-            description="We focus on enterprise clarity, engineering rigor, and dependable delivery over hype or unverified claims."
+            eyebrow="Why Distinct"
+            title="A Pragmatic, Business-First Partner"
+            description="We focus on enterprise discipline, technical honesty, and measurable delivery."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-subtle">
-              <div className="w-10 h-10 rounded bg-[#F2F5F7] text-[#17365D] flex items-center justify-center mb-4">
-                <Compass className="w-5 h-5 text-[#267C78]" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-subtle">
+              <div className="w-9 h-9 rounded bg-[#F2F5F7] text-[#267C78] flex items-center justify-center mb-3">
+                <Compass className="w-4 h-4" />
               </div>
-              <h4 className="text-base font-bold text-[#17365D] mb-2">Verified Experience</h4>
-              <p className="text-xs sm:text-sm text-[#263442]/80 leading-relaxed">
-                Incorporated in 2019 in Chennai, offering an established foundation in enterprise IT consulting and digital solutions.
+              <h4 className="text-sm font-bold text-[#17365D] mb-1.5">Verified Foundation</h4>
+              <p className="text-xs text-[#263442]/80 leading-relaxed">
+                Founded in 2019 in Chennai with a proven focus on IT consulting and systems delivery.
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-subtle">
-              <div className="w-10 h-10 rounded bg-[#F2F5F7] text-[#17365D] flex items-center justify-center mb-4">
-                <Cpu className="w-5 h-5 text-[#267C78]" />
+            <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-subtle">
+              <div className="w-9 h-9 rounded bg-[#F2F5F7] text-[#267C78] flex items-center justify-center mb-3">
+                <Cpu className="w-4 h-4" />
               </div>
-              <h4 className="text-base font-bold text-[#17365D] mb-2">Pragmatic AI & ML</h4>
-              <p className="text-xs sm:text-sm text-[#263442]/80 leading-relaxed">
-                Applied machine learning grounded in measurable business processes rather than generic theoretical models.
+              <h4 className="text-sm font-bold text-[#17365D] mb-1.5">Applied AI & ML</h4>
+              <p className="text-xs text-[#263442]/80 leading-relaxed">
+                Machine learning models engineered to solve tangible operational bottlenecks.
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-subtle">
-              <div className="w-10 h-10 rounded bg-[#F2F5F7] text-[#17365D] flex items-center justify-center mb-4">
-                <ShieldCheck className="w-5 h-5 text-[#267C78]" />
+            <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-subtle">
+              <div className="w-9 h-9 rounded bg-[#F2F5F7] text-[#267C78] flex items-center justify-center mb-3">
+                <ShieldCheck className="w-4 h-4" />
               </div>
-              <h4 className="text-base font-bold text-[#17365D] mb-2">Enterprise SAP Discipline</h4>
-              <p className="text-xs sm:text-sm text-[#263442]/80 leading-relaxed">
-                Rigorous adherence to enterprise resource governance, business process continuity, and SLA accountability.
+              <h4 className="text-sm font-bold text-[#17365D] mb-1.5">SAP Discipline</h4>
+              <p className="text-xs text-[#263442]/80 leading-relaxed">
+                Strict adherence to process governance, business continuity, and SLA standards.
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-subtle">
-              <div className="w-10 h-10 rounded bg-[#F2F5F7] text-[#17365D] flex items-center justify-center mb-4">
-                <Users2 className="w-5 h-5 text-[#267C78]" />
+            <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-subtle">
+              <div className="w-9 h-9 rounded bg-[#F2F5F7] text-[#267C78] flex items-center justify-center mb-3">
+                <Users2 className="w-4 h-4" />
               </div>
-              <h4 className="text-base font-bold text-[#17365D] mb-2">Elastic Staff Augmentation</h4>
-              <p className="text-xs sm:text-sm text-[#263442]/80 leading-relaxed">
-                Immediate access to vetted engineers, architects, and ERP professionals to rapidly bolster development velocity.
+              <h4 className="text-sm font-bold text-[#17365D] mb-1.5">Talent Augmentation</h4>
+              <p className="text-xs text-[#263442]/80 leading-relaxed">
+                Vetted developers, data scientists, and ERP specialists to accelerate delivery sprints.
               </p>
             </div>
           </div>
@@ -456,25 +453,25 @@ export const Home = () => {
       </section>
 
       {/* 8. CONTACT CTA BANNER */}
-      <section className="py-16 bg-white">
+      <section className="py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#17365D] rounded-2xl p-8 sm:p-12 text-white shadow-xl flex flex-col lg:flex-row items-center justify-between gap-8">
-            <div className="space-y-3 max-w-2xl text-center lg:text-left">
+          <div className="bg-[#17365D] rounded-2xl p-7 sm:p-10 text-white shadow-xl flex flex-col lg:flex-row items-center justify-between gap-6">
+            <div className="space-y-2 max-w-2xl text-center lg:text-left">
               <span className="text-xs font-bold uppercase tracking-wider text-[#267C78]">
                 Get In Touch
               </span>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
-                Ready to Discuss Your Enterprise Technology Needs?
+              <h2 className="text-xl sm:text-2xl font-bold tracking-tight">
+                Ready to Discuss Your Technology Requirements?
               </h2>
-              <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-                Connect with Distinct Systems to explore technology consulting, AI/ML development, staff augmentation, or SAP implementations.
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Connect with our team for consulting, AI/ML development, staffing, or SAP support.
               </p>
             </div>
-            <div className="flex flex-wrap items-center gap-4 shrink-0">
-              <Button to="/contact" variant="primary" size="lg" icon={ArrowRight}>
+            <div className="flex flex-wrap items-center gap-3 shrink-0">
+              <Button to="/contact" variant="primary" size="md" icon={ArrowRight}>
                 Initiate Corporate Enquiry
               </Button>
-              <Button to="/services" variant="outlineWhite" size="lg">
+              <Button to="/services" variant="outlineWhite" size="md">
                 Review Services
               </Button>
             </div>
@@ -486,4 +483,3 @@ export const Home = () => {
 };
 
 export default Home;
-
