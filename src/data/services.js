@@ -169,6 +169,7 @@ export const INDUSTRIES = [
   {
     id: "manufacturing",
     name: "Manufacturing & Industrial Operations",
+    bgImage: "/industries/manufacturing.jpg",
     summary: "Predictive equipment maintenance, smart telemetry, and shop floor ERP alignment.",
     applications: [
       "Predictive diagnostics via IoT sensors",
@@ -181,6 +182,7 @@ export const INDUSTRIES = [
   {
     id: "healthcare",
     name: "Healthcare & Life Sciences",
+    bgImage: "/industries/healthcare.jpg",
     summary: "Data interoperability, compliant analytics, and secure administrative automation.",
     applications: [
       "Clinical workflow & diagnostic data analysis",
@@ -193,6 +195,7 @@ export const INDUSTRIES = [
   {
     id: "finance",
     name: "Financial Services & Banking",
+    bgImage: "/industries/finance.jpg",
     summary: "Algorithmic anomaly detection, risk modeling, and core ledger modernization.",
     applications: [
       "Real-time fraud scoring pipelines",
@@ -205,6 +208,7 @@ export const INDUSTRIES = [
   {
     id: "retail",
     name: "Retail & Consumer Commerce",
+    bgImage: "/industries/retail.jpg",
     summary: "Omnichannel inventory sync, dynamic demand forecasting, and warehouse automation.",
     applications: [
       "ML-based demand forecasting",
@@ -217,6 +221,7 @@ export const INDUSTRIES = [
   {
     id: "logistics",
     name: "Logistics & Supply Chain",
+    bgImage: "/industries/logistics.jpg",
     summary: "Fleet telematics, dynamic route optimization, and automated dispatch tracking.",
     applications: [
       "Dynamic route & fuel optimization",
@@ -229,6 +234,7 @@ export const INDUSTRIES = [
   {
     id: "enterprise",
     name: "Enterprise Businesses & Conglomerates",
+    bgImage: "/industries/enterprise.jpg",
     summary: "Multi-entity ERP harmonization, IT staff augmentation, and centralized oversight.",
     applications: [
       "Multi-subsidiary SAP ERP harmonization",
