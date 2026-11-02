@@ -28,12 +28,14 @@ export const Home = () => {
     <div className="space-y-0">
       {/* 1. HERO SECTION WITH BACKGROUND IMAGE */}
       <section className="relative overflow-hidden bg-[#17365D] text-white py-16 sm:py-24 lg:py-28">
-        {/* Background Photo with Corporate Navy Gradient Overlay */}
+        {/* Real Training & Leadership Session Photo with Directional Navy Gradient */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-[center_35%] bg-no-repeat scale-[1.01]"
           style={{ backgroundImage: `url('/hero-bg.jpg')` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/90 to-[#0d2138]/85 backdrop-blur-[1px]" />
+        {/* High-readability gradient: Deep navy on left for crisp text contrast, balanced overlay on right to show the real session */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/85 to-[#17365D]/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#17365D]/80 via-transparent to-black/25" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
