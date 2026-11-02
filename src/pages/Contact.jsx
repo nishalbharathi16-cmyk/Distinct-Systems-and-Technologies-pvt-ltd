@@ -290,8 +290,8 @@ export const Contact = () => {
                 <div className="flex items-start gap-3">
                   <Mail className="w-5 h-5 text-[#17365D] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold block text-[#17365D]">Official Domain Inbox</span>
-                    <a href={`mailto:${COMPANY_INFO.contact.email}`} className="text-[#267C78] underline text-xs sm:text-sm">
+                    <span className="font-semibold block text-[#17365D]">Official Contact Email</span>
+                    <a href={`mailto:${COMPANY_INFO.contact.email}`} className="text-[#267C78] underline text-xs sm:text-sm font-medium">
                       {COMPANY_INFO.contact.email}
                     </a>
                   </div>

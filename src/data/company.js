@@ -16,8 +16,8 @@ export const COMPANY_INFO = {
     note: "Official registered office details verified with Ministry of Corporate Affairs records."
   },
   contact: {
-    email: "contact@distinctsystems.in", // standard domain email placeholder
-    emailNote: "Official corporate inbox (awaiting direct department routing)",
+    email: "drmanimaran@distinct-systems.com",
+    emailNote: "Official contact email",
     phone: "+91 (0) 44 2615 XXXX",
     phoneNote: "Corporate desk number awaiting publication approval",
     location: "Chennai, Tamil Nadu, India"

@@ -13,6 +13,7 @@ Production-quality, enterprise-grade corporate website for **Distinct Systems an
 - **Official Domain:** [https://distinctsystems.in](https://distinctsystems.in)
 - **Official LinkedIn:** [Distinct Systems and Technologies](https://www.linkedin.com/company/distinct-systems-and-technologies/)
 - **Headquarters:** Chennai, Tamil Nadu, India
+- **Contact Email:** [drmanimaran@distinct-systems.com](mailto:drmanimaran@distinct-systems.com)
 
 ### Core Competencies
 - Artificial Intelligence & Machine Learning
