@@ -126,3 +126,4 @@ export const CertificationsSection = ({ className = "" }) => {
 };
 
 export default CertificationsSection;
+

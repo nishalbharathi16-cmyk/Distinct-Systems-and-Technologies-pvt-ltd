@@ -272,7 +272,6 @@ export const Contact = () => {
                 <MapPin className="w-5 h-5 text-[#17365D] shrink-0 mt-0.5" />
                 <div className="text-sm text-[#263442] space-y-1">
                   <p className="font-bold text-[#17365D]">Distinct Systems & Technologies Pvt. Ltd.</p>
-                  <p>Anna Nagar West</p>
                   <p>Chennai, Tamil Nadu, India</p>
                   <p className="text-xs text-slate-500 pt-1">
                     Registered with Registrar of Companies (ROC Chennai), Ministry of Corporate Affairs.

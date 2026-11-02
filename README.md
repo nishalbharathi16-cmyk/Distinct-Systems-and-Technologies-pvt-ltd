@@ -12,7 +12,7 @@ Production-quality, enterprise-grade corporate website for **Distinct Systems an
 - **Company Type:** Privately Held (Registered in Chennai, Tamil Nadu, India)
 - **Official Domain:** [https://distinctsystems.in](https://distinctsystems.in)
 - **Official LinkedIn:** [Distinct Systems and Technologies](https://www.linkedin.com/company/distinct-systems-and-technologies/)
-- **Headquarters:** Anna Nagar West, Chennai, Tamil Nadu, India
+- **Headquarters:** Chennai, Tamil Nadu, India
 
 ### Core Competencies
 - Artificial Intelligence & Machine Learning

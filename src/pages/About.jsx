@@ -89,7 +89,7 @@ export const About = () => {
             </p>
 
             <div className="bg-[#F2F5F7] p-4 rounded-lg border-l-4 border-[#267C78] text-xs text-[#263442]/80">
-              <strong>Registered Office:</strong> Anna Nagar West, Chennai, Tamil Nadu, India. Privately held entity registered with Registrar of Companies (ROC Chennai).
+              <strong>Registered Office:</strong> Chennai, Tamil Nadu, India. Privately held entity registered with Registrar of Companies (ROC Chennai).
             </div>
           </div>
 

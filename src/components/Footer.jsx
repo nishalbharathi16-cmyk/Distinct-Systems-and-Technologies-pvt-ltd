@@ -99,7 +99,6 @@ export const Footer = () => {
                 <div>
                   <p className="font-semibold text-white">Distinct Systems and Technologies Pvt. Ltd.</p>
                   <p>{COMPANY_INFO.headquarters.addressSummary}</p>
-                  <p className="text-xs text-slate-400 mt-1">Chennai, Tamil Nadu, India</p>
                 </div>
               </div>
 

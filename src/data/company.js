@@ -12,7 +12,7 @@ export const COMPANY_INFO = {
     city: "Chennai",
     state: "Tamil Nadu",
     country: "India",
-    addressSummary: "Anna Nagar West, Chennai, Tamil Nadu, India",
+    addressSummary: "Chennai, Tamil Nadu, India",
     note: "Official registered office details verified with Ministry of Corporate Affairs records."
   },
   contact: {
