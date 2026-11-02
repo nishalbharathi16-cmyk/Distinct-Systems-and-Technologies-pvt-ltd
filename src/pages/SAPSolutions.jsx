@@ -1,13 +1,13 @@
 import React from 'react';
-import { 
-  Layers, 
-  ShieldCheck, 
-  Database, 
-  RefreshCw, 
-  Workflow, 
-  Clock, 
-  ArrowRight, 
-  CheckCircle2, 
+import {
+  Layers,
+  ShieldCheck,
+  Database,
+  RefreshCw,
+  Workflow,
+  Clock,
+  ArrowRight,
+  CheckCircle2,
   FileText,
   AlertCircle,
   Sparkles
@@ -18,11 +18,11 @@ import Button from '../components/Button';
 export const SAPSolutions = () => {
   return (
     <div className="py-12 sm:py-16 space-y-16">
-      
+
       {/* 1. Header & Dedicated Enterprise SAP Hero with Background */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-2xl bg-[#17365D] text-white p-8 sm:p-12 shadow-card">
-          <div 
+          <div
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url('/services/sap-implementation.jpg')` }}
           />
@@ -63,7 +63,7 @@ export const SAPSolutions = () => {
       {/* 2. SAP S/4HANA & Core Capabilities */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          
+
           <div className="lg:col-span-7 space-y-5">
             <span className="text-xs font-bold uppercase tracking-wider text-[#267C78]">
               Modernization Roadmap
@@ -217,12 +217,12 @@ export const SAPSolutions = () => {
       {/* 4. SAP Support Services & Maintenance Framework */}
       <section id="support" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          
+
           <div className="lg:col-span-5 bg-white rounded-xl p-7 border border-slate-200 shadow-card space-y-4">
             <h3 className="text-base font-bold text-[#17365D] border-b border-slate-100 pb-2.5">
               SAP Support SLA Tiers
             </h3>
-            
+
             <div className="space-y-2.5 text-xs">
               <div className="p-3 rounded bg-[#F2F5F7] border-l-4 border-red-500">
                 <div className="flex justify-between font-bold text-[#17365D] mb-0.5">

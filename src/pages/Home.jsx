@@ -154,9 +154,9 @@ export const Home = () => {
       </section>
 
       {/* 2. COMPANY INTRODUCTION / VERIFIED PROFILE */}
-      <section className="py-14 bg-[#F2F5F7]">
+      <section className="py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-xl border border-slate-200/80 p-6 sm:p-8 shadow-card">
+          <div className="bg-white rounded-2xl border border-slate-200/90 p-6 sm:p-10 shadow-card">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8 space-y-3">
                 <span className="text-xs font-bold uppercase tracking-wider text-[#267C78]">
@@ -173,7 +173,7 @@ export const Home = () => {
                 </p>
               </div>
 
-              <div className="lg:col-span-4 bg-[#F2F5F7] rounded-lg p-5 border border-slate-200 space-y-2.5">
+              <div className="lg:col-span-4 bg-[#F2F5F7] rounded-xl p-5 border border-slate-200 space-y-2.5">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-[#17365D]">
                   Corporate Details
                 </h4>
@@ -202,7 +202,7 @@ export const Home = () => {
       </section>
 
       {/* 3. CORE TECHNOLOGY EXPERTISE */}
-      <section className="py-16 bg-white">
+      <section className="py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Core Competencies"
@@ -214,10 +214,10 @@ export const Home = () => {
             {COMPANY_INFO.expertise.map((item, idx) => (
               <div 
                 key={idx}
-                className="bg-[#F2F5F7] rounded-lg p-4 border border-slate-200/80 hover:border-[#17365D]/40 hover:bg-white hover:shadow-card transition-all group flex flex-col justify-between"
+                className="bg-white rounded-xl p-4 border border-slate-200/90 shadow-card hover:border-[#17365D]/40 transition-all group flex flex-col justify-between"
               >
-                <div className="w-7 h-7 rounded bg-white text-[#267C78] group-hover:bg-[#17365D] group-hover:text-white flex items-center justify-center mb-2.5 transition-colors">
-                  <CheckCircle2 className="w-3.5 h-3.5" />
+                <div className="w-8 h-8 rounded-lg bg-[#F2F5F7] text-[#267C78] group-hover:bg-[#17365D] group-hover:text-white flex items-center justify-center mb-2.5 transition-colors">
+                  <CheckCircle2 className="w-4 h-4" />
                 </div>
                 <div>
                   <h4 className="text-xs sm:text-sm font-semibold text-[#17365D] group-hover:text-[#267C78] transition-colors leading-snug">
@@ -232,7 +232,7 @@ export const Home = () => {
       </section>
 
       {/* 4. SERVICES OVERVIEW */}
-      <section className="py-16 bg-[#F2F5F7]">
+      <section className="py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Services"
@@ -343,7 +343,7 @@ export const Home = () => {
       </section>
 
       {/* 6. TECHNOLOGY SOLUTIONS */}
-      <section className="py-16 bg-white">
+      <section className="py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Solutions"
@@ -355,7 +355,7 @@ export const Home = () => {
             {SOLUTIONS.slice(0, 3).map((sol) => (
               <div 
                 key={sol.id} 
-                className="bg-[#F2F5F7] rounded-lg p-6 border border-slate-200/80 hover:border-[#17365D]/30 transition-all shadow-subtle flex flex-col justify-between"
+                className="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-card hover:border-[#17365D]/30 transition-all flex flex-col justify-between"
               >
                 <div>
                   <span className="text-xs font-semibold text-[#267C78] uppercase tracking-wider block mb-1.5">
@@ -378,7 +378,7 @@ export const Home = () => {
                   </div>
                 </div>
 
-                <div className="pt-3 border-t border-slate-200">
+                <div className="pt-3 border-t border-slate-100">
                   <Link
                     to="/solutions"
                     className="text-xs font-bold text-[#17365D] hover:text-[#267C78] inline-flex items-center gap-1"
@@ -400,7 +400,7 @@ export const Home = () => {
       </section>
 
       {/* 7. WHY CHOOSE DISTINCT SYSTEMS */}
-      <section className="py-16 bg-[#F2F5F7]">
+      <section className="py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Why Distinct"
@@ -409,7 +409,7 @@ export const Home = () => {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-            <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-subtle">
+            <div className="bg-white p-5 rounded-xl border border-slate-200/90 shadow-card">
               <div className="w-9 h-9 rounded bg-[#F2F5F7] text-[#267C78] flex items-center justify-center mb-3">
                 <Compass className="w-4 h-4" />
               </div>
@@ -419,7 +419,7 @@ export const Home = () => {
               </p>
             </div>
 
-            <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-subtle">
+            <div className="bg-white p-5 rounded-xl border border-slate-200/90 shadow-card">
               <div className="w-9 h-9 rounded bg-[#F2F5F7] text-[#267C78] flex items-center justify-center mb-3">
                 <Cpu className="w-4 h-4" />
               </div>
@@ -429,7 +429,7 @@ export const Home = () => {
               </p>
             </div>
 
-            <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-subtle">
+            <div className="bg-white p-5 rounded-xl border border-slate-200/90 shadow-card">
               <div className="w-9 h-9 rounded bg-[#F2F5F7] text-[#267C78] flex items-center justify-center mb-3">
                 <ShieldCheck className="w-4 h-4" />
               </div>
@@ -439,7 +439,7 @@ export const Home = () => {
               </p>
             </div>
 
-            <div className="bg-white p-5 rounded-lg border border-slate-200 shadow-subtle">
+            <div className="bg-white p-5 rounded-xl border border-slate-200/90 shadow-card">
               <div className="w-9 h-9 rounded bg-[#F2F5F7] text-[#267C78] flex items-center justify-center mb-3">
                 <Users2 className="w-4 h-4" />
               </div>
@@ -453,7 +453,7 @@ export const Home = () => {
       </section>
 
       {/* 8. CONTACT CTA BANNER */}
-      <section className="py-14 bg-white">
+      <section className="py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-[#17365D] rounded-2xl p-7 sm:p-10 text-white shadow-xl flex flex-col lg:flex-row items-center justify-between gap-6">
             <div className="space-y-2 max-w-2xl text-center lg:text-left">
