@@ -9,8 +9,7 @@ import {
   ShieldCheck, 
   ArrowRight, 
   CheckCircle2, 
-  Briefcase,
-  ExternalLink
+  Sparkles
 } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
 import Button from '../components/Button';
@@ -29,23 +28,23 @@ export const Services = () => {
   return (
     <div className="py-12 sm:py-16 space-y-16">
       
-      {/* 1. Header */}
+      {/* 1. Page Header */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="border-b border-slate-200 pb-10">
           <SectionHeading
             align="left"
             eyebrow="Practice Portfolio"
             title="Enterprise Technology & Consulting Services"
-            description="Six specialized practice lines delivering applied intelligence, modern enterprise architectures, and agile engineering capacity."
+            description="Six specialized practice areas delivering applied artificial intelligence, predictive analytics, enterprise architecture, and SAP implementations."
           />
 
-          {/* Practice Highlights Navigation */}
+          {/* Quick Practice Navigation */}
           <div className="flex flex-wrap gap-2 pt-2">
             {SERVICES.map((s) => (
               <a
                 key={s.id}
                 href={`#${s.id}`}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-[#F2F5F7] text-[#17365D] hover:bg-[#17365D] hover:text-white transition-colors border border-slate-200"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#F2F5F7] text-[#17365D] hover:bg-[#17365D] hover:text-white transition-colors border border-slate-200"
               >
                 <span>{s.title}</span>
               </a>
@@ -54,111 +53,128 @@ export const Services = () => {
         </div>
       </section>
 
-      {/* 2. Detailed Service Sections with Individual Background Images */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      {/* 2. Detailed Service Sections with Clear, Directly Relevant Visuals */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {SERVICES.map((service, index) => {
           const IconComponent = iconMap[service.icon] || Layers;
+          const isReversed = index % 2 === 1;
 
           return (
             <div
               key={service.id}
               id={service.id}
-              className="relative overflow-hidden rounded-2xl border border-slate-200/80 shadow-card transition-all duration-300 group"
+              className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:shadow-card-hover"
             >
-              {/* Individual Background Image */}
-              <div 
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-                style={{ backgroundImage: `url('${service.bgImage}')` }}
-              />
-              {/* Deep Corporate Navy Overlay for crystal clear readability */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/90 to-[#0e223b]/85 backdrop-blur-[1px]" />
-
-              <div className="relative z-10 p-7 sm:p-10 text-white">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                  
-                  {/* Left Overview Column */}
-                  <div className="lg:col-span-7 space-y-5">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
+                
+                {/* Content Column */}
+                <div className={`lg:col-span-7 p-6 sm:p-10 lg:p-12 flex flex-col justify-between ${
+                  isReversed ? 'lg:order-2' : 'lg:order-1'
+                }`}>
+                  <div className="space-y-5">
+                    {/* Header badge & title */}
                     <div className="flex items-center gap-3">
-                      <div className="w-11 h-11 rounded-lg bg-white/10 backdrop-blur-md border border-white/20 text-[#267C78] flex items-center justify-center shadow-sm">
-                        <IconComponent className="w-5 h-5 text-[#267C78]" />
+                      <div className="w-12 h-12 rounded-xl bg-[#F2F5F7] text-[#267C78] flex items-center justify-center border border-slate-200 shadow-subtle">
+                        <IconComponent className="w-6 h-6 text-[#267C78]" />
                       </div>
                       <div>
                         <span className="text-xs font-bold uppercase tracking-wider text-[#267C78]">
                           Practice 0{index + 1}
                         </span>
-                        <h3 className="text-xl sm:text-2xl font-bold text-white">
+                        <h3 className="text-xl sm:text-2xl font-bold text-[#17365D]">
                           {service.title}
                         </h3>
                       </div>
                     </div>
 
-                    <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
+                    {/* Short Description */}
+                    <p className="text-sm sm:text-base text-[#263442] leading-relaxed">
                       {service.shortDesc}
                     </p>
 
-                    {/* Business Value Highlight */}
-                    <div className="bg-white/10 backdrop-blur-md p-4 rounded-lg border-l-4 border-[#267C78] border border-white/10 text-white">
-                      <span className="text-xs font-bold uppercase tracking-wider text-[#267C78] block mb-1">
+                    {/* Business Value Highlight Box */}
+                    <div className="bg-[#F2F5F7] rounded-lg p-4 border-l-4 border-[#267C78]">
+                      <span className="text-xs font-bold uppercase tracking-wider text-[#17365D] block mb-1">
                         Strategic Enterprise Value
                       </span>
-                      <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                      <p className="text-xs sm:text-sm text-[#263442] leading-relaxed">
                         {service.businessValue}
                       </p>
                     </div>
 
-                    {/* CTA */}
-                    <div className="pt-1">
-                      <Button 
-                        to={`/contact?subject=${encodeURIComponent(service.title)}`} 
-                        variant="primary" 
-                        size="md" 
-                        icon={ArrowRight}
-                      >
-                        {service.cta}
-                      </Button>
-                    </div>
-                  </div>
-
-                  {/* Right Details Column: Core Deliverables & Tags */}
-                  <div className="lg:col-span-5 bg-white/10 backdrop-blur-md rounded-xl p-5 sm:p-7 border border-white/20 space-y-4 shadow-xl text-white">
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-[#267C78] border-b border-white/15 pb-2.5">
-                      Scope & Capabilities
-                    </h4>
-
-                    <ul className="space-y-2.5">
-                      {service.features.map((feat, fIdx) => (
-                        <li key={fIdx} className="flex items-start gap-2.5 text-xs text-slate-200">
-                          <CheckCircle2 className="w-4 h-4 text-[#267C78] shrink-0 mt-0.5" />
-                          <span>{feat}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="pt-3 border-t border-white/15">
-                      <span className="text-[11px] font-semibold text-slate-300 block mb-1.5">
-                        Core Competencies:
+                    {/* Capabilities checklist */}
+                    <div className="space-y-2 pt-1">
+                      <span className="text-xs font-bold uppercase tracking-wider text-[#17365D] block">
+                        Core Capabilities
                       </span>
-                      <div className="flex flex-wrap gap-1.5">
-                        {service.tags.map((tag, tIdx) => (
-                          <span 
-                            key={tIdx} 
-                            className="text-[10px] font-medium bg-white/15 text-white px-2.5 py-0.5 rounded border border-white/10"
-                          >
-                            {tag}
-                          </span>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {service.features.map((feat, fIdx) => (
+                          <div key={fIdx} className="flex items-start gap-2 text-xs text-[#263442]">
+                            <CheckCircle2 className="w-4 h-4 text-[#267C78] shrink-0 mt-0.5" />
+                            <span>{feat}</span>
+                          </div>
                         ))}
                       </div>
                     </div>
                   </div>
 
+                  {/* Action Bar */}
+                  <div className="pt-6 mt-6 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
+                    <Button 
+                      to={`/contact?subject=${encodeURIComponent(service.title)}`} 
+                      variant="primary" 
+                      size="md" 
+                      icon={ArrowRight}
+                    >
+                      {service.cta}
+                    </Button>
+
+                    <div className="flex flex-wrap gap-1.5">
+                      {service.tags.map((tag, tIdx) => (
+                        <span 
+                          key={tIdx} 
+                          className="text-[11px] font-medium bg-[#F2F5F7] text-[#263442] px-2.5 py-1 rounded"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
+
+                {/* Relevant Themed Visual Panel */}
+                <div className={`lg:col-span-5 relative min-h-[280px] sm:min-h-[340px] lg:min-h-full overflow-hidden ${
+                  isReversed ? 'lg:order-1' : 'lg:order-2'
+                }`}>
+                  {/* Clean, Full-Resolution Relevant Image */}
+                  <img
+                    src={service.bgImage}
+                    alt={`${service.title} Enterprise Practice Visual`}
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105"
+                    loading="lazy"
+                  />
+                  {/* Subtle corporate corner vignette for depth and elegance */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#17365D]/80 via-transparent to-black/20" />
+
+                  {/* Visual Overlay Tag */}
+                  <div className="absolute bottom-5 left-5 right-5 text-white">
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#17365D]/90 backdrop-blur-md border border-white/20 text-xs font-semibold text-white shadow-lg mb-1">
+                      <Sparkles className="w-3.5 h-3.5 text-[#267C78]" />
+                      <span>{service.title.split('&')[0].trim()} Practice Visual</span>
+                    </div>
+                    <p className="text-[11px] text-slate-200 drop-shadow-sm">
+                      Distinct Systems Enterprise Core Competency
+                    </p>
+                  </div>
+                </div>
+
               </div>
             </div>
           );
         })}
       </section>
 
-      {/* 3. Engagement Models Section */}
+      {/* 3. Engagement Models */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-[#17365D] rounded-2xl p-7 sm:p-10 text-white shadow-xl">
           <div className="max-w-3xl space-y-5">
