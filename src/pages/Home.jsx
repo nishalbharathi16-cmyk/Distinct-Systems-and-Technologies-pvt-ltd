@@ -21,6 +21,7 @@ import { SERVICES, SOLUTIONS } from '../data/services';
 import ServiceCard from '../components/ServiceCard';
 import SectionHeading from '../components/SectionHeading';
 import Button from '../components/Button';
+import CertificationsSection from '../components/CertificationsSection';
 
 export const Home = () => {
   return (
@@ -452,7 +453,10 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* 8. CONTACT CTA BANNER */}
+      {/* 8. CERTIFICATIONS & RECOGNITIONS */}
+      <CertificationsSection />
+
+      {/* 9. CONTACT CTA BANNER */}
       <section className="py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-[#17365D] rounded-2xl p-7 sm:p-10 text-white shadow-xl flex flex-col lg:flex-row items-center justify-between gap-6">
