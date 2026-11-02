@@ -9,11 +9,69 @@ import {
   UploadCloud, 
   Send,
   AlertCircle,
-  FileCheck
+  FileCheck,
+  Sparkles,
+  ArrowRight
 } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
 import Button from '../components/Button';
 import { COMPANY_INFO } from '../data/company';
+
+const CULTURE_PILLARS = [
+  {
+    icon: Code2,
+    title: "Engineering Substance",
+    image: "/services/ai-ml.jpg",
+    desc: "We prioritize sound software architecture, reproducible code, and measurable performance over shortcuts or hype."
+  },
+  {
+    icon: Compass,
+    title: "Professional Autonomy",
+    image: "/industries/enterprise.jpg",
+    desc: "Our consultants are trusted to make technical decisions and communicate directly with stakeholders on architecture choices."
+  },
+  {
+    icon: Users2,
+    title: "Collaborative Growth",
+    image: "/services/staff-augmentation.jpg",
+    desc: "Cross-disciplinary exposure where full-stack developers, ML engineers, and SAP specialists share operational best practices."
+  }
+];
+
+const SKILL_DOMAINS = [
+  {
+    id: "ai-ml",
+    title: "AI & Machine Learning",
+    badge: "Specialized Practice",
+    skills: "Python, PyTorch, TensorFlow, Scikit-learn, NLP, Computer Vision, Model Deployment",
+    description: "Architect and operationalize applied intelligence models, deep learning pipelines, and predictive algorithms.",
+    image: "/services/ai-ml.jpg"
+  },
+  {
+    id: "data-science",
+    title: "Data Science & Analytics",
+    badge: "High Demand",
+    skills: "SQL, Pandas, Data Lakes, Snowflake, BigQuery, BI Visualization, Statistical Modeling",
+    description: "Transform complex disparate enterprise data streams into structured analytics assets and business intelligence.",
+    image: "/services/data-science.jpg"
+  },
+  {
+    id: "sap-consulting",
+    title: "SAP Functional & Technical",
+    badge: "Core Enterprise",
+    skills: "SAP S/4HANA, FICO, MM, SD, PP, ABAP, Fiori, BTP, Solution Architecture",
+    description: "Drive digital core migrations, module configurations, workflow enhancements, and post-go-live optimization.",
+    image: "/services/sap-implementation.jpg"
+  },
+  {
+    id: "cloud-fullstack",
+    title: "Full-Stack & Cloud Systems",
+    badge: "Continuous Bench",
+    skills: "Node.js, React, TypeScript, Docker, Kubernetes, AWS, Azure, CI/CD automation",
+    description: "Engineer resilient full-stack applications, distributed services, and automated cloud infrastructure.",
+    image: "/services/tech-consulting.jpg"
+  }
+];
 
 export const Careers = () => {
   const [formData, setFormData] = useState({
@@ -121,39 +179,43 @@ export const Careers = () => {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-subtle space-y-3">
-            <div className="w-10 h-10 rounded-lg bg-[#267C78]/10 text-[#267C78] flex items-center justify-center">
-              <Code2 className="w-5 h-5" />
-            </div>
-            <h4 className="text-base font-bold text-[#17365D]">Engineering Substance</h4>
-            <p className="text-xs sm:text-sm text-[#263442]/80 leading-relaxed">
-              We prioritize sound software architecture, reproducible code, and measurable performance over shortcuts or hype.
-            </p>
-          </div>
-
-          <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-subtle space-y-3">
-            <div className="w-10 h-10 rounded-lg bg-[#17365D]/10 text-[#17365D] flex items-center justify-center">
-              <Compass className="w-5 h-5" />
-            </div>
-            <h4 className="text-base font-bold text-[#17365D]">Professional Autonomy</h4>
-            <p className="text-xs sm:text-sm text-[#263442]/80 leading-relaxed">
-              Our consultants are trusted to make technical decisions and communicate directly with stakeholders on architecture choices.
-            </p>
-          </div>
-
-          <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-subtle space-y-3">
-            <div className="w-10 h-10 rounded-lg bg-[#267C78]/10 text-[#267C78] flex items-center justify-center">
-              <Users2 className="w-5 h-5" />
-            </div>
-            <h4 className="text-base font-bold text-[#17365D]">Collaborative Growth</h4>
-            <p className="text-xs sm:text-sm text-[#263442]/80 leading-relaxed">
-              Cross-disciplinary exposure where full-stack developers, ML engineers, and SAP specialists share operational best practices.
-            </p>
-          </div>
+          {CULTURE_PILLARS.map((pillar, idx) => {
+            const Icon = pillar.icon;
+            return (
+              <div 
+                key={idx} 
+                className="group relative overflow-hidden rounded-xl border border-slate-200 bg-white shadow-subtle hover:shadow-card-hover transition-all duration-300 flex flex-col"
+              >
+                {/* Visual Header with Image and Overlay */}
+                <div className="relative h-40 overflow-hidden">
+                  <img 
+                    src={pillar.image} 
+                    alt={pillar.title} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#17365D]/95 via-[#17365D]/50 to-black/30" />
+                  <div className="absolute bottom-3 left-4 right-4 flex items-center gap-3 text-white">
+                    <div className="w-9 h-9 rounded-lg bg-[#267C78] text-white flex items-center justify-center shadow shrink-0">
+                      <Icon className="w-4 h-4" />
+                    </div>
+                    <h4 className="text-base font-bold text-white drop-shadow-sm leading-tight">
+                      {pillar.title}
+                    </h4>
+                  </div>
+                </div>
+                <div className="p-6 flex-1 flex flex-col justify-between">
+                  <p className="text-xs sm:text-sm text-[#263442]/85 leading-relaxed">
+                    {pillar.desc}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
-      {/* 3. Core Skill Domains */}
+      {/* 3. Core Skill Domains with Individual Directly Relevant Background Images */}
       <section className="bg-[#F2F5F7] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
@@ -163,55 +225,85 @@ export const Careers = () => {
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-lg border border-slate-200">
-              <h4 className="text-sm font-bold text-[#17365D] mb-2">AI & Machine Learning</h4>
-              <p className="text-xs text-[#263442]/70 leading-relaxed mb-3">
-                Python, PyTorch, TensorFlow, Scikit-learn, NLP, Computer Vision, Model Deployment.
-              </p>
-              <span className="text-[11px] font-semibold text-[#267C78]">Talent Bench Active</span>
-            </div>
+            {SKILL_DOMAINS.map((domain) => (
+              <div 
+                key={domain.id} 
+                className="group bg-white rounded-xl border border-slate-200 overflow-hidden shadow-subtle hover:shadow-card-hover transition-all duration-300 flex flex-col"
+              >
+                {/* Individual Background Image Header */}
+                <div className="relative h-44 overflow-hidden">
+                  <img 
+                    src={domain.image} 
+                    alt={`${domain.title} Practice Visual`} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#17365D]/95 via-[#17365D]/50 to-transparent" />
+                  <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider text-white bg-[#267C78] px-2.5 py-1 rounded shadow">
+                    {domain.badge}
+                  </span>
+                  <h4 className="absolute bottom-3 left-4 right-4 text-base font-bold text-white drop-shadow-sm leading-snug">
+                    {domain.title}
+                  </h4>
+                </div>
 
-            <div className="bg-white p-6 rounded-lg border border-slate-200">
-              <h4 className="text-sm font-bold text-[#17365D] mb-2">Data Science & Analytics</h4>
-              <p className="text-xs text-[#263442]/70 leading-relaxed mb-3">
-                SQL, Pandas, Data Lakes, Snowflake, BigQuery, BI Visualization, Statistical Modeling.
-              </p>
-              <span className="text-[11px] font-semibold text-[#267C78]">Talent Bench Active</span>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-slate-200">
-              <h4 className="text-sm font-bold text-[#17365D] mb-2">SAP Functional & Technical</h4>
-              <p className="text-xs text-[#263442]/70 leading-relaxed mb-3">
-                SAP S/4HANA, FICO, MM, SD, PP, ABAP, Fiori, BTP, Solution Architecture.
-              </p>
-              <span className="text-[11px] font-semibold text-[#267C78]">Talent Bench Active</span>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-slate-200">
-              <h4 className="text-sm font-bold text-[#17365D] mb-2">Full-Stack & Cloud Architecture</h4>
-              <p className="text-xs text-[#263442]/70 leading-relaxed mb-3">
-                Node.js, React, TypeScript, Docker, Kubernetes, AWS, Azure, CI/CD automation.
-              </p>
-              <span className="text-[11px] font-semibold text-[#267C78]">Talent Bench Active</span>
-            </div>
+                {/* Card Content */}
+                <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
+                  <p className="text-xs sm:text-sm text-[#263442]/85 leading-relaxed">
+                    {domain.description}
+                  </p>
+                  <div>
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#17365D] block mb-1">
+                      Key Competencies
+                    </span>
+                    <p className="text-xs text-slate-500 leading-relaxed">
+                      {domain.skills}
+                    </p>
+                  </div>
+                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
+                    <span className="text-[11px] font-semibold text-[#267C78] flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-[#267C78] animate-pulse"></span>
+                      Bench Active
+                    </span>
+                    <a
+                      href="#apply"
+                      className="text-xs font-semibold text-[#17365D] hover:text-[#267C78] inline-flex items-center gap-1 transition-colors"
+                    >
+                      <span>Apply</span>
+                      <ArrowRight className="w-3 h-3" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* 4. Resume Submission Interface */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-2xl border border-slate-200 p-8 sm:p-12 shadow-card">
-          <div className="border-b border-slate-200 pb-6 mb-8">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#267C78]">
-              General Career Inquiry
-            </span>
-            <h3 className="text-2xl font-bold text-[#17365D] mt-1">
-              Submit Your Profile to Distinct Systems
-            </h3>
-            <p className="text-sm text-[#263442]/80 mt-2">
-              Share your professional details with our technical recruitment coordinators. We review submissions when new client project roles open.
-            </p>
+      <section id="apply" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+          {/* Form Top Banner with attractive background image */}
+          <div className="relative bg-[#17365D] text-white p-6 sm:p-8 overflow-hidden">
+            <div 
+              className="absolute inset-0 bg-cover bg-center opacity-30"
+              style={{ backgroundImage: `url('/industries/enterprise.jpg')` }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/85 to-transparent" />
+            <div className="relative z-10 space-y-1.5">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#267C78] px-2.5 py-1 rounded bg-white/10 inline-block">
+                General Career Inquiry
+              </span>
+              <h3 className="text-xl sm:text-2xl font-bold text-white">
+                Submit Your Profile to Distinct Systems
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-200 max-w-2xl">
+                Share your professional details with our technical recruitment coordinators for upcoming client project deployments.
+              </p>
+            </div>
           </div>
+
+          <div className="p-6 sm:p-10">
 
           {submittedStatus === 'success' ? (
             <div className="bg-[#F2F5F7] rounded-xl p-8 border border-[#267C78]/30 space-y-4 text-center">
@@ -392,6 +484,7 @@ export const Careers = () => {
               </div>
             </form>
           )}
+          </div>
         </div>
       </section>
 
