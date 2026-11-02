@@ -21,38 +21,49 @@ export const About = () => {
   return (
     <div className="py-12 sm:py-16 space-y-16">
       
-      {/* 1. Page Header */}
+      {/* 1. Page Header with Attractive Hero Background */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="border-b border-slate-200 pb-10">
-          <SectionHeading
-            align="left"
-            eyebrow="Corporate Profile"
-            title="About Distinct Systems and Technologies"
-            description="AI/ML digital technology startup providing consulting, talent augmentation, and enterprise SAP implementations."
+        <div className="relative overflow-hidden rounded-2xl bg-[#17365D] text-white p-8 sm:p-12 shadow-card mb-8">
+          <div 
+            className="absolute inset-0 bg-cover bg-center opacity-30"
+            style={{ backgroundImage: `url('/hero-bg.jpg')` }}
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/90 to-[#0e223b]/85 backdrop-blur-[1px]" />
 
-          {/* Quick Info Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6">
-            <div className="bg-[#F2F5F7] p-4 rounded-lg border border-slate-200">
-              <span className="text-xs text-slate-500 block mb-1">Entity</span>
-              <span className="text-sm font-bold text-[#17365D]">Pvt. Ltd.</span>
-              <span className="text-xs text-[#263442]/70 block mt-0.5">Incorporated in India</span>
-            </div>
-            <div className="bg-[#F2F5F7] p-4 rounded-lg border border-slate-200">
-              <span className="text-xs text-slate-500 block mb-1">Established</span>
-              <span className="text-sm font-bold text-[#17365D]">March 2019</span>
-              <span className="text-xs text-[#263442]/70 block mt-0.5">Chennai, Tamil Nadu</span>
-            </div>
-            <div className="bg-[#F2F5F7] p-4 rounded-lg border border-slate-200">
-              <span className="text-xs text-slate-500 block mb-1">Sector</span>
-              <span className="text-sm font-bold text-[#17365D]">IT Services</span>
-              <span className="text-xs text-[#263442]/70 block mt-0.5">Consulting & Software</span>
-            </div>
-            <div className="bg-[#F2F5F7] p-4 rounded-lg border border-slate-200">
-              <span className="text-xs text-slate-500 block mb-1">Portal</span>
-              <span className="text-sm font-bold text-[#267C78]">distinctsystems.in</span>
-              <span className="text-xs text-[#263442]/70 block mt-0.5">Verified Domain</span>
-            </div>
+          <div className="relative z-10 max-w-3xl space-y-3">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#267C78] px-3 py-1 rounded bg-white/10 inline-block">
+              Corporate Profile
+            </span>
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+              About Distinct Systems and Technologies
+            </h1>
+            <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
+              AI/ML digital technology startup providing technology consulting, specialized talent augmentation, and enterprise SAP implementations.
+            </p>
+          </div>
+        </div>
+
+        {/* Quick Info Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="bg-[#F2F5F7] p-4 rounded-lg border border-slate-200">
+            <span className="text-xs text-slate-500 block mb-1">Entity</span>
+            <span className="text-sm font-bold text-[#17365D]">Pvt. Ltd.</span>
+            <span className="text-xs text-[#263442]/70 block mt-0.5">Incorporated in India</span>
+          </div>
+          <div className="bg-[#F2F5F7] p-4 rounded-lg border border-slate-200">
+            <span className="text-xs text-slate-500 block mb-1">Established</span>
+            <span className="text-sm font-bold text-[#17365D]">March 2019</span>
+            <span className="text-xs text-[#263442]/70 block mt-0.5">Chennai, Tamil Nadu</span>
+          </div>
+          <div className="bg-[#F2F5F7] p-4 rounded-lg border border-slate-200">
+            <span className="text-xs text-slate-500 block mb-1">Sector</span>
+            <span className="text-sm font-bold text-[#17365D]">IT Services</span>
+            <span className="text-xs text-[#263442]/70 block mt-0.5">Consulting & Software</span>
+          </div>
+          <div className="bg-[#F2F5F7] p-4 rounded-lg border border-slate-200">
+            <span className="text-xs text-slate-500 block mb-1">Portal</span>
+            <span className="text-sm font-bold text-[#267C78]">distinctsystems.in</span>
+            <span className="text-xs text-[#263442]/70 block mt-0.5">Verified Domain</span>
           </div>
         </div>
       </section>

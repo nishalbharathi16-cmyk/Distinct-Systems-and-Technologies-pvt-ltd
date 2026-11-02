@@ -36,9 +36,29 @@ export const MainLayout = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-[#263442] selection:bg-[#267C78] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-white text-[#263442] selection:bg-[#267C78] selection:text-white relative">
+      {/* 
+        Attractive Global Background System:
+        1. Ambient geometric engineering dot-matrix grid
+        2. Soft teal atmospheric glow at top-left
+        3. Soft navy atmospheric depth at top-right
+      */}
+      <div 
+        className="fixed inset-0 pointer-events-none z-0"
+        style={{
+          backgroundImage: `radial-gradient(rgba(23, 54, 93, 0.045) 1px, transparent 1px)`,
+          backgroundSize: '24px 24px'
+        }}
+      />
+      <div 
+        className="fixed -top-40 -left-40 w-[600px] h-[600px] bg-[#267C78]/[0.04] rounded-full blur-3xl pointer-events-none z-0" 
+      />
+      <div 
+        className="fixed top-20 -right-40 w-[700px] h-[700px] bg-[#17365D]/[0.035] rounded-full blur-3xl pointer-events-none z-0" 
+      />
+
       <Navbar />
-      <main className="flex-1 w-full">
+      <main className="flex-1 w-full relative z-10">
         <Outlet />
       </main>
       <Footer />
@@ -58,4 +78,3 @@ export const MainLayout = () => {
 };
 
 export default MainLayout;
-

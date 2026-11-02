@@ -76,27 +76,38 @@ export const Careers = () => {
   return (
     <div className="py-12 sm:py-16 space-y-20">
       
-      {/* 1. Header */}
+      {/* 1. Header with Attractive Hero Background */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="border-b border-slate-200 pb-12">
-          <SectionHeading
-            align="left"
-            eyebrow="Join Our Engineering Network"
-            title="Careers at Distinct Systems and Technologies"
-            description="We collaborate with skilled technologists, data scientists, and enterprise SAP consultants who appreciate engineering discipline, continuous growth, and technical clarity."
+        <div className="relative overflow-hidden rounded-2xl bg-[#17365D] text-white p-8 sm:p-12 shadow-card">
+          <div 
+            className="absolute inset-0 bg-cover bg-center opacity-35"
+            style={{ backgroundImage: `url('/services/staff-augmentation.jpg')` }}
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/90 to-[#0e223b]/85 backdrop-blur-[1px]" />
 
-          {/* Transparent Openings Notice */}
-          <div className="bg-[#F2F5F7] rounded-xl p-5 border border-slate-200 mt-6 flex items-start gap-3.5">
-            <AlertCircle className="w-5 h-5 text-[#267C78] shrink-0 mt-0.5" />
-            <div className="text-xs sm:text-sm text-[#263442]/85 space-y-1">
-              <span className="font-semibold text-[#17365D] block">
-                General Talent Pool & Career Inquiries
-              </span>
-              <p>
-                To maintain transparency, Distinct Systems does not publish unverified job postings or speculative openings. We actively evaluate experienced technical profiles for our consulting talent bench and staff augmentation assignments. Submit your profile below for upcoming project deployments.
-              </p>
-            </div>
+          <div className="relative z-10 max-w-3xl space-y-3">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#267C78] px-3 py-1 rounded bg-white/10 inline-block">
+              Talent Bench & Careers
+            </span>
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+              Careers at Distinct Systems and Technologies
+            </h1>
+            <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
+              We collaborate with skilled technologists, data scientists, and enterprise SAP consultants who appreciate engineering discipline and continuous growth.
+            </p>
+          </div>
+        </div>
+
+        {/* Transparent Openings Notice */}
+        <div className="bg-[#F2F5F7] rounded-xl p-4 border border-slate-200 mt-6 flex items-start gap-3">
+          <AlertCircle className="w-4 h-4 text-[#267C78] shrink-0 mt-0.5" />
+          <div className="text-xs sm:text-sm text-[#263442]/85 space-y-0.5">
+            <span className="font-semibold text-[#17365D] block">
+              General Talent Pool & Career Inquiries
+            </span>
+            <p>
+              Distinct Systems evaluates experienced technical profiles for our consulting talent bench and staff augmentation assignments. Submit your profile below for upcoming project deployments.
+            </p>
           </div>
         </div>
       </section>
