@@ -6,7 +6,8 @@ export const COMPANY_INFO = {
   founded: "2019",
   companyType: "Privately Held",
   industry: "IT Services and IT Consulting",
-  domain: "https://distinctsystems.in",
+  domain: "https://distinctsystems.com",
+  displayDomain: "distinctsystems.com",
   linkedin: "https://www.linkedin.com/company/distinct-systems-and-technologies/",
   headquarters: {
     city: "Chennai",

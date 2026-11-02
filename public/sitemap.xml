@@ -1,44 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://distinctsystems.in/</loc>
+    <loc>https://distinctsystems.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://distinctsystems.in/about</loc>
+    <loc>https://distinctsystems.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://distinctsystems.in/services</loc>
+    <loc>https://distinctsystems.com/services</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://distinctsystems.in/solutions</loc>
+    <loc>https://distinctsystems.com/solutions</loc>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://distinctsystems.in/industries</loc>
+    <loc>https://distinctsystems.com/industries</loc>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://distinctsystems.in/sap-solutions</loc>
+    <loc>https://distinctsystems.com/sap-solutions</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://distinctsystems.in/careers</loc>
+    <loc>https://distinctsystems.com/careers</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://distinctsystems.in/contact</loc>
+    <loc>https://distinctsystems.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>
-

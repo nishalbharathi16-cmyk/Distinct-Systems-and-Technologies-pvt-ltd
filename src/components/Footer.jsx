@@ -35,7 +35,7 @@ export const Footer = () => {
               <div className="flex items-center gap-2">
                 <span className="font-semibold text-white">Domain:</span>
                 <a href={COMPANY_INFO.domain} className="hover:text-[#267C78] underline inline-flex items-center gap-1">
-                  distinctsystems.in
+                  distinctsystems.com
                   <ArrowUpRight className="w-3 h-3" />
                 </a>
               </div>
@@ -129,7 +129,7 @@ export const Footer = () => {
           <div className="flex items-center gap-6">
             <Link to="/about" className="hover:text-white transition-colors">Corporate Governance</Link>
             <Link to="/contact" className="hover:text-white transition-colors">Enquiry Disclosures</Link>
-            <a href={COMPANY_INFO.domain} className="hover:text-white transition-colors">distinctsystems.in</a>
+            <a href={COMPANY_INFO.domain} className="hover:text-white transition-colors">distinctsystems.com</a>
           </div>
         </div>
       </div>

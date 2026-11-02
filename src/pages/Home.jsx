@@ -195,7 +195,7 @@ export const Home = () => {
                   </div>
                   <div className="flex justify-between py-1">
                     <span className="text-slate-500">Domain:</span>
-                    <span className="font-semibold text-right text-[#267C78]">distinctsystems.in</span>
+                    <span className="font-semibold text-right text-[#267C78]">distinctsystems.com</span>
                   </div>
                 </div>
               </div>

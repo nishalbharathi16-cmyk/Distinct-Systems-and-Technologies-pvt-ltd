@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://distinctsystems.in/sitemap.xml
-
+Sitemap: https://distinctsystems.com/sitemap.xml

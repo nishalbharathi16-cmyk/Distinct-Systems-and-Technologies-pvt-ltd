@@ -62,7 +62,7 @@ export const About = () => {
           </div>
           <div className="bg-[#F2F5F7] p-4 rounded-lg border border-slate-200">
             <span className="text-xs text-slate-500 block mb-1">Portal</span>
-            <span className="text-sm font-bold text-[#267C78]">distinctsystems.in</span>
+            <span className="text-sm font-bold text-[#267C78]">distinctsystems.com</span>
             <span className="text-xs text-[#263442]/70 block mt-0.5">Verified Domain</span>
           </div>
         </div>

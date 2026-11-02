@@ -10,7 +10,7 @@ Production-quality, enterprise-grade corporate website for **Distinct Systems an
 - **Industry:** IT Services and IT Consulting
 - **Founded:** 2019
 - **Company Type:** Privately Held (Registered in Chennai, Tamil Nadu, India)
-- **Official Domain:** [https://distinctsystems.in](https://distinctsystems.in)
+- **Official Domain:** [https://distinctsystems.com](https://distinctsystems.com)
 - **Official LinkedIn:** [Distinct Systems and Technologies](https://www.linkedin.com/company/distinct-systems-and-technologies/)
 - **Headquarters:** Chennai, Tamil Nadu, India
 - **Contact Email:** [drmanimaran@distinct-systems.com](mailto:drmanimaran@distinct-systems.com)
@@ -169,11 +169,11 @@ vercel --prod
 
 ---
 
-## 7. Connecting the Official Domain (`distinctsystems.in`)
+## 7. Connecting the Official Domain (`distinctsystems.com`)
 
 1. Open your project in the **Vercel Dashboard**.
 2. Navigate to **Settings** > **Domains**.
-3. Add `distinctsystems.in` and `www.distinctsystems.in`.
+3. Add `distinctsystems.com` and `www.distinctsystems.com`.
 4. Configure DNS records at your domain registrar (e.g., GoDaddy, Namecheap, Google Domains):
    - **Type A**: Name `@`, Value `76.76.21.21`
    - **Type CNAME**: Name `www`, Value `cname.vercel-dns.com`
