@@ -5,6 +5,7 @@ export const SERVICES = [
     shortDesc: "Custom AI/ML models and cognitive automation engineered for core business workflows.",
     businessValue: "Automates repetitive operations and accelerates data-backed decision cycles.",
     icon: "BrainCircuit",
+    bgImage: "/services/ai-ml.jpg",
     tags: ["Predictive Analytics", "Deep Learning", "Process Automation"],
     features: [
       "Custom predictive model development",
@@ -20,6 +21,7 @@ export const SERVICES = [
     shortDesc: "Transforming raw business telemetry into unified analytics, predictive models, and executive dashboards.",
     businessValue: "Delivers strategic clarity, margin optimization, and empirical forecasting.",
     icon: "BarChart3",
+    bgImage: "/services/data-science.jpg",
     tags: ["Data Architecture", "BI Dashboards", "Statistical Modeling"],
     features: [
       "Enterprise data warehousing & pipelines",
@@ -35,6 +37,7 @@ export const SERVICES = [
     shortDesc: "Strategic architecture leadership, modernization blueprints, and technology roadmapping.",
     businessValue: "Mitigates deployment risks, reduces technical debt, and aligns IT with business goals.",
     icon: "Compass",
+    bgImage: "/services/tech-consulting.jpg",
     tags: ["Architecture Design", "Cloud Strategy", "Modernization"],
     features: [
       "IT capability audits & gap analyses",
@@ -50,6 +53,7 @@ export const SERVICES = [
     shortDesc: "Vetted software engineers, data scientists, and SAP consultants to scale project velocity on demand.",
     businessValue: "Closes critical skill gaps rapidly without long-term hiring overhead.",
     icon: "Users2",
+    bgImage: "/services/staff-augmentation.jpg",
     tags: ["Specialized Talent", "SAP Experts", "On-Demand Scaling"],
     features: [
       "Pre-vetted senior engineers & architects",
@@ -65,6 +69,7 @@ export const SERVICES = [
     shortDesc: "End-to-end ERP implementations and seamless migrations to SAP S/4HANA.",
     businessValue: "Standardizes operations, boosts financial clarity, and establishes a resilient digital core.",
     icon: "Layers",
+    bgImage: "/services/sap-implementation.jpg",
     tags: ["SAP S/4HANA", "ERP Modernization", "Data Migration"],
     features: [
       "Scoping, blueprinting & architecture",
@@ -80,6 +85,7 @@ export const SERVICES = [
     shortDesc: "Proactive Level 2 and Level 3 functional maintenance, health audits, and continuous optimization.",
     businessValue: "Ensures maximum system uptime, regulatory compliance, and ERP investment protection.",
     icon: "ShieldCheck",
+    bgImage: "/services/sap-support.jpg",
     tags: ["L2/L3 Support", "SLA Resolution", "Patch Management"],
     features: [
       "SLA-governed incident resolution",
