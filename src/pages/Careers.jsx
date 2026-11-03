@@ -136,21 +136,22 @@ export const Careers = () => {
       
       {/* 1. Header with Attractive Hero Background */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-2xl bg-[#17365D] text-white p-8 sm:p-12 shadow-card">
+        <div className="relative overflow-hidden rounded-2xl bg-[#17365D] text-white p-8 sm:p-14 shadow-card min-h-[320px] flex items-center">
           <div 
-            className="absolute inset-0 bg-cover bg-center opacity-35"
-            style={{ backgroundImage: `url('/services/staff-augmentation.jpg')` }}
+            className="absolute inset-0 bg-cover bg-right md:bg-center"
+            style={{ backgroundImage: `url('/careers-hero-bg.jpg')` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/90 to-[#0e223b]/85 backdrop-blur-[1px]" />
+          {/* Directional left overlay to maintain crystal-clear text contrast while preserving crisp clarity of the team & charts on the right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#17365D] via-[#17365D]/80 md:via-[#17365D]/30 to-transparent" />
 
-          <div className="relative z-10 max-w-3xl space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#267C78] px-3 py-1 rounded bg-white/10 inline-block">
+          <div className="relative z-10 max-w-2xl space-y-3">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#267C78] px-3 py-1 rounded bg-white/10 backdrop-blur-sm inline-block">
               Talent Bench & Careers
             </span>
-            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight drop-shadow-sm">
               Careers at Distinct Systems and Technologies
             </h1>
-            <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-100 leading-relaxed drop-shadow-sm">
               We collaborate with skilled technologists, data scientists, and enterprise SAP consultants who appreciate engineering discipline and continuous growth.
             </p>
           </div>
