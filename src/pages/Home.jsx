@@ -26,19 +26,20 @@ import CertificationsSection from '../components/CertificationsSection';
 export const Home = () => {
   return (
     <div className="space-y-0">
-      {/* 1. HERO SECTION WITH BACKGROUND IMAGE */}
+      {/* 1. HERO SECTION WITH CRISP HD BACKGROUND PHOTO */}
       <section className="relative overflow-hidden bg-[#17365D] text-white py-16 sm:py-24 lg:py-32">
-        {/* Real Training & Leadership Session Photo - HD 2K Resolution with edge clarity and natural lighting */}
-        <div 
-          className="absolute inset-0 bg-cover bg-[85%_25%] sm:bg-[82%_30%] bg-no-repeat contrast-[1.03] brightness-[1.02]"
-          style={{ 
-            backgroundImage: `url('/hero-bg.jpg')`,
-            imageRendering: '-webkit-optimize-contrast'
-          }}
+        {/* Hardware-Accelerated Razor-Sharp 2.5K Image (2560x1920) */}
+        <img
+          src="/hero-bg.jpg"
+          alt="Distinct Systems Executive Leadership & Training Session - Dr. Manimaran"
+          className="absolute inset-0 w-full h-full object-cover object-[85%_25%] sm:object-[82%_30%] select-none pointer-events-none"
+          loading="eager"
+          fetchPriority="high"
+          decoding="sync"
         />
-        {/* Directional gradient: Rich navy only on the left text area for crisp contrast, completely transparent on the right so Dr. Manimaran is bright and clearly visible */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/80 to-transparent lg:w-[56%] pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#17365D]/60 via-transparent to-transparent pointer-events-none" />
+        {/* Directional gradient: Rich navy strictly over the text column on the left; right side is completely transparent and crystal clear so Dr. Manimaran is sharp, bright, and visible */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/80 to-transparent lg:w-[52%] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#17365D]/40 via-transparent to-transparent pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl space-y-6">
