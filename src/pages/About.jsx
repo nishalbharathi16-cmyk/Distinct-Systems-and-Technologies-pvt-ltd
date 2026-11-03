@@ -21,22 +21,22 @@ export const About = () => {
   return (
     <div className="py-12 sm:py-16 space-y-16">
       
-      {/* 1. Page Header with Technical Enterprise Systems Background & Visual Showcase */}
+      {/* 1. Page Header with Business Brainstorming & Strategic Ideation Background */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-2xl bg-[#17365D] text-white p-8 sm:p-12 shadow-card mb-8">
-          {/* High-Tech Enterprise Systems Background Photo */}
+          {/* Business Brainstorming & Strategic Ideation Background Photo */}
           <div 
-            className="absolute inset-0 bg-cover bg-center opacity-35"
-            style={{ backgroundImage: `url('/services/tech-consulting.jpg')` }}
+            className="absolute inset-0 bg-cover bg-[center_40%] opacity-40"
+            style={{ backgroundImage: `url('/about/business-brainstorming-bg.jpg')` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/85 to-[#17365D]/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/85 to-[#17365D]/50" />
 
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             {/* Left Content Column */}
             <div className="lg:col-span-7 space-y-4">
               <span className="text-xs font-bold uppercase tracking-wider text-[#267C78] px-3 py-1 rounded bg-white/10 inline-block border border-white/10">
-                Corporate Profile • Deep-Tech & Enterprise Systems
+                Corporate Profile • Strategic Technology Consulting
               </span>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
                 About Distinct Systems and Technologies
@@ -48,13 +48,13 @@ export const About = () => {
               {/* Technical Practice Highlights */}
               <div className="pt-2 flex flex-wrap gap-2 text-xs">
                 <span className="bg-white/10 text-white font-medium px-3 py-1 rounded-md border border-white/15">
+                  Strategic Advisory
+                </span>
+                <span className="bg-white/10 text-white font-medium px-3 py-1 rounded-md border border-white/15">
                   AI & Machine Learning
                 </span>
                 <span className="bg-white/10 text-white font-medium px-3 py-1 rounded-md border border-white/15">
                   SAP S/4HANA Practice
-                </span>
-                <span className="bg-white/10 text-white font-medium px-3 py-1 rounded-md border border-white/15">
-                  Technology Consulting
                 </span>
                 <span className="bg-white/10 text-white font-medium px-3 py-1 rounded-md border border-white/15">
                   Staff Augmentation
@@ -62,14 +62,14 @@ export const About = () => {
               </div>
             </div>
 
-            {/* Right Technical Visual Showcase Card */}
+            {/* Right Card: Business Brainstorming & Ideation Showcase (Zero Robots) */}
             <div className="hidden lg:block lg:col-span-5">
               <div className="group relative rounded-xl overflow-hidden border border-white/20 shadow-2xl bg-white/10 backdrop-blur-md">
-                <div className="h-52 overflow-hidden relative">
+                <div className="h-56 overflow-hidden relative">
                   <img 
-                    src="/services/ai-ml.jpg" 
-                    alt="Distinct Systems Applied AI & Enterprise Technology Architecture"
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    src="/about/brainstorming-ideation.jpg" 
+                    alt="Distinct Systems Business Brainstorming & Agile Ideation"
+                    className="w-full h-full object-cover object-[center_35%] transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#17365D] via-[#17365D]/30 to-transparent" />
                   
@@ -77,17 +77,17 @@ export const About = () => {
                   <div className="absolute top-3 left-3">
                     <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#17365D]/90 backdrop-blur-md border border-white/20 text-[11px] font-semibold text-white shadow">
                       <Sparkles className="w-3 h-3 text-[#267C78]" />
-                      <span>Enterprise Systems Stack</span>
+                      <span>Agile Strategy & Ideation</span>
                     </span>
                   </div>
 
                   {/* Caption */}
                   <div className="absolute bottom-2.5 left-3.5 right-3 text-white">
                     <span className="text-[10px] font-bold uppercase tracking-wider text-[#267C78] block">
-                      Core Digital Capabilities
+                      Strategic Architecture Mapping
                     </span>
                     <p className="text-xs text-slate-200">
-                      Engineering intelligent solutions for enterprise digital transformation
+                      Collaborative cross-functional brainstorming for client solutions
                     </p>
                   </div>
                 </div>
