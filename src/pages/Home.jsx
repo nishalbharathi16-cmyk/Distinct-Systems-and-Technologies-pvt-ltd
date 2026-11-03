@@ -26,19 +26,19 @@ import CertificationsSection from '../components/CertificationsSection';
 export const Home = () => {
   return (
     <div className="space-y-0">
-      {/* 1. HERO SECTION WITH ORIGINAL LEADERSHIP PHOTO */}
-      <section className="relative overflow-hidden bg-[#17365D] text-white py-16 sm:py-24 lg:py-32">
-        {/* Exact Uploaded Original Photo */}
+      {/* 1. HERO SECTION WITH HIGH-DEFINITION LEADERSHIP PHOTO */}
+      <section className="relative overflow-hidden bg-[#17365D] text-white py-14 sm:py-20 lg:py-24">
+        {/* High-Definition 2K Image in Natural Framing to Prevent Any Digital Zoom Blur */}
         <img
           src="/hero-bg.jpg"
           alt="Distinct Systems Executive Leadership & Training Session - Dr. Manimaran"
-          className="absolute inset-0 w-full h-full object-cover object-[85%_25%] sm:object-[82%_30%] select-none pointer-events-none"
+          className="absolute inset-0 w-full h-full object-cover object-[right_center] sm:object-[80%_35%] select-none pointer-events-none"
           loading="eager"
           fetchPriority="high"
           decoding="sync"
         />
         {/* Gradient strictly over left text; right half is 100% natural, clear, and untouched */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/80 to-transparent lg:w-[50%] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/80 to-transparent lg:w-[48%] pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl space-y-6">
