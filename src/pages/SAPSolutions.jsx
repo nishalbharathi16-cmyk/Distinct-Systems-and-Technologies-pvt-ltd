@@ -21,30 +21,35 @@ export const SAPSolutions = () => {
 
       {/* 1. Header & Dedicated Enterprise SAP Hero with Background */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-2xl bg-[#17365D] text-white p-8 sm:p-12 shadow-card">
+        <div className="relative overflow-hidden rounded-2xl bg-[#082545] text-white p-8 sm:p-12 lg:p-16 shadow-2xl border border-white/10 min-h-[460px] flex items-center">
+          {/* High-Resolution Clean SAP Architecture & Fiori Launchpad Background */}
           <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url('/services/sap-implementation.jpg')` }}
+            className="absolute inset-0 bg-cover bg-right lg:bg-center bg-no-repeat"
+            style={{ backgroundImage: `url('/services/sap-hero-clean-bg.jpg')` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/90 to-[#0e223b]/85 backdrop-blur-[1px]" />
+          {/* Directional gradient ensuring crisp text contrast on the left, while showcasing the Fiori Launchpad & Blueprints on the right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#082545] via-[#082545]/85 to-transparent lg:w-3/5" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#082545]/60 via-transparent to-black/20" />
 
-          <div className="relative z-10 max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold text-white">
+          <div className="relative z-10 max-w-2xl space-y-5">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold text-white shadow-sm">
               <Sparkles className="w-3.5 h-3.5 text-[#267C78]" />
               <span>Enterprise Core Competency • SAP S/4HANA</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+            
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.18]">
               SAP Solutions & S/4HANA Implementation Services
             </h1>
-            <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
+            
+            <p className="text-base sm:text-lg text-slate-200 leading-relaxed font-normal max-w-xl">
               Distinct Systems delivers enterprise consulting, phased implementation, and SLA-governed support services for SAP environments.
             </p>
 
-            <div className="pt-2 flex flex-wrap gap-3">
-              <Button to="/contact?subject=SAP%20S/4HANA%20Consulting" variant="primary" size="md" icon={ArrowRight}>
+            <div className="pt-2 flex flex-wrap items-center gap-3.5">
+              <Button to="/contact?subject=SAP%20S/4HANA%20Consulting" variant="primary" size="lg" icon={ArrowRight}>
                 Schedule SAP Scoping Call
               </Button>
-              <Button to="#support" variant="outlineWhite" size="md">
+              <Button to="#support" variant="outlineWhite" size="lg">
                 Review Support SLAs
               </Button>
             </div>

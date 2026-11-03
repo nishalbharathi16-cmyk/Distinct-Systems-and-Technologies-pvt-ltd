@@ -263,6 +263,13 @@ export const Home = () => {
 
       {/* 5. SAP S/4HANA HIGHLIGHT */}
       <section className="py-16 bg-[#17365D] text-white relative overflow-hidden">
+        {/* Subtle Ambient Background with SAP Architecture & Fiori Launchpad */}
+        <div 
+          className="absolute inset-0 bg-cover bg-right opacity-25 pointer-events-none"
+          style={{ backgroundImage: `url('/services/sap-fiori-graphic.jpg')` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#17365D] via-[#17365D]/95 to-[#17365D]/75 pointer-events-none" />
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
