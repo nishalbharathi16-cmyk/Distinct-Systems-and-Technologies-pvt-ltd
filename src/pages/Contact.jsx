@@ -89,21 +89,22 @@ export const Contact = () => {
       
       {/* 1. Page Header with Attractive Hero Background */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-2xl bg-[#17365D] text-white p-8 sm:p-12 shadow-card">
+        <div className="relative overflow-hidden rounded-2xl bg-[#17365D] text-white p-8 sm:p-14 shadow-card min-h-[320px] flex items-center">
           <div 
-            className="absolute inset-0 bg-cover bg-center opacity-30"
-            style={{ backgroundImage: `url('/industries/enterprise.jpg')` }}
+            className="absolute inset-0 bg-cover bg-right md:bg-center"
+            style={{ backgroundImage: `url('/contact-hero-bg.jpg')` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/90 to-[#0e223b]/85 backdrop-blur-[1px]" />
+          {/* Directional left overlay to preserve crisp contrast for heading while showcasing the enterprise team on the right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#17365D] via-[#17365D]/80 md:via-[#17365D]/30 to-transparent" />
 
-          <div className="relative z-10 max-w-3xl space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#267C78] px-3 py-1 rounded bg-white/10 inline-block">
+          <div className="relative z-10 max-w-2xl space-y-3">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#267C78] px-3 py-1 rounded bg-white/10 backdrop-blur-sm inline-block">
               Direct Engagement
             </span>
-            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight drop-shadow-sm">
               Contact Distinct Systems and Technologies
             </h1>
-            <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-100 leading-relaxed drop-shadow-sm">
               Connect with our technical practice leaders and consulting coordinators regarding AI/ML solutions, staff augmentation, or SAP implementations.
             </p>
           </div>
