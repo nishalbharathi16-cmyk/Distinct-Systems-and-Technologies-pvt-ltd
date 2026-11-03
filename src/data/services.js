@@ -232,6 +232,19 @@ export const INDUSTRIES = [
     disclaimer: "Representative industry vertical mapping based on Distinct's architectural capabilities. Specific engagements are evaluated per client requirements."
   },
   {
+    id: "education",
+    name: "Education & Digital Learning",
+    bgImage: "/industries/education.jpg",
+    summary: "Data platforms, digital learning systems, and analytics solutions engineered for universities, academic institutions, and enterprise learning providers.",
+    applications: [
+      "Student learning analytics & performance dashboards",
+      "Digital learning platforms & LMS/LXP integration",
+      "Academic administration & institutional ERP pipelines",
+      "Automated credentialing & examination data verification"
+    ],
+    disclaimer: "Representative industry vertical mapping based on Distinct's architectural capabilities. Specific engagements are evaluated per client requirements."
+  },
+  {
     id: "enterprise",
     name: "Enterprise Businesses & Conglomerates",
     bgImage: "/industries/enterprise.jpg",

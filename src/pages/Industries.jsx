@@ -6,6 +6,7 @@ import {
   ShoppingBag, 
   Truck, 
   Building2, 
+  GraduationCap,
   Info, 
   ArrowRight,
   CheckCircle2,
@@ -22,6 +23,7 @@ const industryIcons = {
   finance: Landmark,
   retail: ShoppingBag,
   logistics: Truck,
+  education: GraduationCap,
   enterprise: Building2,
 };
 
