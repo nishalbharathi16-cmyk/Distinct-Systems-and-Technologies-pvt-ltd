@@ -286,41 +286,57 @@ export const Home = () => {
               </div>
             </div>
 
-            <div className="lg:col-span-5">
-              <div className="bg-white text-[#263442] rounded-xl p-6 shadow-xl border border-white/20 space-y-4">
-                <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                  <h4 className="text-sm font-bold text-[#17365D]">SAP Highlights</h4>
-                  <span className="text-xs font-semibold px-2 py-0.5 rounded bg-[#267C78]/10 text-[#267C78]">
-                    Active Practice
-                  </span>
+            {/* Right Column: Featured Technical Architecture & SAP Fiori Visual */}
+            <div className="lg:col-span-5 relative">
+              <div className="group relative rounded-2xl overflow-hidden border border-white/20 shadow-2xl bg-white/5 backdrop-blur-sm transition-all duration-300 hover:shadow-card-hover">
+                {/* High-Tech Blueprint & Fiori Dashboard Image */}
+                <div className="relative h-64 sm:h-72 overflow-hidden">
+                  <img
+                    src="/services/sap-fiori-graphic.jpg"
+                    alt="SAP S/4HANA Implementation Architecture & Fiori Launchpad"
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#17365D] via-[#17365D]/30 to-transparent" />
+                  
+                  {/* Holographic Architecture Badge */}
+                  <div className="absolute top-4 left-4">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#17365D]/90 backdrop-blur-md border border-white/20 text-xs font-semibold text-white shadow-lg">
+                      <Sparkles className="w-3.5 h-3.5 text-[#267C78]" />
+                      <span>SAP Fiori & Architecture Stack</span>
+                    </span>
+                  </div>
+
+                  {/* Visual Spec Overlay */}
+                  <div className="absolute bottom-3 left-4 right-4 text-white">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#267C78] block">
+                      Digital Core Architecture
+                    </span>
+                    <p className="text-xs text-slate-200">
+                      In-Memory ERP • Migration Pipelines • Real-Time Telemetry
+                    </p>
+                  </div>
                 </div>
 
-                <div className="space-y-2.5 text-xs">
-                  <div className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-[#267C78] shrink-0 mt-0.5" />
-                    <div>
-                      <span className="font-bold text-[#17365D]">End-to-End Delivery:</span>
-                      <p className="text-slate-600">Scoping, configuration, testing, and go-live.</p>
+                {/* Technical Highlights Bar */}
+                <div className="p-4 bg-white text-[#263442] space-y-2.5">
+                  <div className="grid grid-cols-2 gap-2 text-xs">
+                    <div className="flex items-center gap-1.5 font-semibold text-[#17365D]">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#267C78] shrink-0" />
+                      <span>End-to-End Delivery</span>
+                    </div>
+                    <div className="flex items-center gap-1.5 font-semibold text-[#17365D]">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#267C78] shrink-0" />
+                      <span>FICO • MM • SD • PP</span>
+                    </div>
+                    <div className="flex items-center gap-1.5 font-semibold text-[#17365D]">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#267C78] shrink-0" />
+                      <span>Fiori UX & BTP</span>
+                    </div>
+                    <div className="flex items-center gap-1.5 font-semibold text-[#17365D]">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#267C78] shrink-0" />
+                      <span>SLA-Governed L2/L3</span>
                     </div>
                   </div>
-                  <div className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-[#267C78] shrink-0 mt-0.5" />
-                    <div>
-                      <span className="font-bold text-[#17365D]">Talent Augmentation:</span>
-                      <p className="text-slate-600">Certified consultants across FICO, MM, SD, and PP.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-[#267C78] shrink-0 mt-0.5" />
-                    <div>
-                      <span className="font-bold text-[#17365D]">SLA Governance:</span>
-                      <p className="text-slate-600">Clear response tiers and system health monitoring.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-[#F2F5F7] p-2.5 rounded text-[11px] text-[#263442]/80 border-l-2 border-[#17365D]">
-                  Dedicated in-house practice for enterprise SAP implementations.
                 </div>
               </div>
             </div>
