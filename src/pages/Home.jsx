@@ -28,10 +28,13 @@ export const Home = () => {
     <div className="space-y-0">
       {/* 1. HERO SECTION WITH BACKGROUND IMAGE */}
       <section className="relative overflow-hidden bg-[#17365D] text-white py-16 sm:py-24 lg:py-32">
-        {/* Real Training & Leadership Session Photo - Positioned to showcase Dr. Manimaran clearly on the right in bright natural light */}
+        {/* Real Training & Leadership Session Photo - HD 2K Resolution with edge clarity and natural lighting */}
         <div 
-          className="absolute inset-0 bg-cover bg-[85%_25%] sm:bg-[82%_30%] bg-no-repeat"
-          style={{ backgroundImage: `url('/hero-bg.jpg')` }}
+          className="absolute inset-0 bg-cover bg-[85%_25%] sm:bg-[82%_30%] bg-no-repeat contrast-[1.03] brightness-[1.02]"
+          style={{ 
+            backgroundImage: `url('/hero-bg.jpg')`,
+            imageRendering: '-webkit-optimize-contrast'
+          }}
         />
         {/* Directional gradient: Rich navy only on the left text area for crisp contrast, completely transparent on the right so Dr. Manimaran is bright and clearly visible */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/80 to-transparent lg:w-[56%] pointer-events-none" />
