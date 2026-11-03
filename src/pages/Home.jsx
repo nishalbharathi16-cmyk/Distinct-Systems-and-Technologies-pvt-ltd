@@ -27,134 +27,110 @@ export const Home = () => {
   return (
     <div className="space-y-0">
       {/* 1. HERO SECTION WITH BACKGROUND IMAGE */}
-      <section className="relative overflow-hidden bg-[#17365D] text-white py-16 sm:py-24 lg:py-28">
-        {/* Real Training & Leadership Session Photo with Directional Navy Gradient */}
+      <section className="relative overflow-hidden bg-[#17365D] text-white py-16 sm:py-24 lg:py-32">
+        {/* Real Training & Leadership Session Photo - Positioned to showcase Dr. Manimaran clearly on the right in bright natural light */}
         <div 
-          className="absolute inset-0 bg-cover bg-[center_35%] bg-no-repeat scale-[1.01]"
+          className="absolute inset-0 bg-cover bg-[85%_25%] sm:bg-[82%_30%] bg-no-repeat"
           style={{ backgroundImage: `url('/hero-bg.jpg')` }}
         />
-        {/* High-readability gradient: Deep navy on left for crisp text contrast, balanced overlay on right to show the real session */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/85 to-[#17365D]/50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#17365D]/80 via-transparent to-black/25" />
+        {/* Directional gradient: Rich navy only on the left text area for crisp contrast, completely transparent on the right so Dr. Manimaran is bright and clearly visible */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/80 to-transparent lg:w-[56%] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#17365D]/60 via-transparent to-transparent pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          <div className="max-w-2xl space-y-6">
             
-            {/* Left Content Column */}
-            <div className="lg:col-span-7 space-y-6">
-              {/* Trust Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs sm:text-sm font-medium text-slate-200">
-                <span className="w-2 h-2 rounded-full bg-[#267C78]" />
-                <span>Enterprise IT Consulting & Digital Tech • Est. 2019</span>
-              </div>
-
-              {/* Exact Hero Headline */}
-              <h1 className="text-3xl sm:text-5xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
-                Engineering Intelligent Solutions for a Connected Future.
-              </h1>
-
-              {/* Exact Hero Supporting Text */}
-              <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl">
-                Empowering businesses through intelligent technology, enterprise solutions, and digital innovation.
-              </p>
-
-              {/* CTAs */}
-              <div className="flex flex-wrap items-center gap-4 pt-2">
-                <Button to="/services" variant="primary" size="lg" icon={ArrowRight}>
-                  Explore Our Services
-                </Button>
-                <Button to="/contact" variant="outlineWhite" size="lg">
-                  Contact Us
-                </Button>
-              </div>
-
-              {/* Trust highlights bar */}
-              <div className="pt-6 border-t border-white/15 grid grid-cols-3 gap-4 text-left">
-                <div>
-                  <span className="block text-xl sm:text-2xl font-bold text-white">2019</span>
-                  <span className="text-xs text-slate-300">Founded in Chennai</span>
-                </div>
-                <div>
-                  <span className="block text-xl sm:text-2xl font-bold text-[#267C78]">SAP S/4HANA</span>
-                  <span className="text-xs text-slate-300">Core Practice</span>
-                </div>
-                <div>
-                  <span className="block text-xl sm:text-2xl font-bold text-white">AI & ML</span>
-                  <span className="text-xs text-slate-300">Digital Solutions</span>
-                </div>
-              </div>
+            {/* Trust Badge */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-xs sm:text-sm font-semibold text-white shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-[#267C78]" />
+              <span>Enterprise IT Consulting & Digital Tech • Est. 2019</span>
             </div>
 
-            {/* Right Graphic: Enterprise Systems Architecture Visual */}
-            <div className="lg:col-span-5">
-              <div className="relative mx-auto max-w-md lg:max-w-none bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-6 sm:p-7 shadow-2xl">
-                
-                {/* Header card pill */}
-                <div className="flex items-center justify-between pb-3.5 border-b border-white/15">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#267C78]" />
-                    <span className="text-xs font-bold text-white uppercase tracking-wider">
-                      Enterprise Architecture
-                    </span>
-                  </div>
-                  <span className="text-[11px] font-semibold text-white bg-[#267C78] px-2 py-0.5 rounded">
-                    Active Stack
-                  </span>
-                </div>
+            {/* Exact Hero Headline */}
+            <h1 className="text-3xl sm:text-5xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.15] drop-shadow-sm">
+              Engineering Intelligent Solutions for a Connected Future.
+            </h1>
 
-                {/* Layered architectural representation */}
-                <div className="space-y-3 my-5">
-                  {/* Layer 1: Intelligence */}
-                  <div className="bg-white/95 text-[#263442] rounded-lg p-3.5 shadow-sm flex items-start gap-3">
-                    <div className="p-2 rounded bg-[#267C78]/10 text-[#267C78] shrink-0 mt-0.5">
-                      <Cpu className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-[#17365D]">AI & Data Science</h4>
-                      <p className="text-xs text-[#263442]/80 mt-0.5">
-                        Predictive algorithms and automated decision pipelines.
-                      </p>
-                    </div>
-                  </div>
+            {/* Exact Hero Supporting Text */}
+            <p className="text-base sm:text-lg text-slate-100 leading-relaxed max-w-xl">
+              Empowering businesses through intelligent technology, enterprise solutions, and digital innovation.
+            </p>
 
-                  {/* Layer 2: ERP Backbone */}
-                  <div className="bg-white/95 text-[#263442] rounded-lg p-3.5 shadow-sm flex items-start gap-3">
-                    <div className="p-2 rounded bg-[#17365D]/10 text-[#17365D] shrink-0 mt-0.5">
-                      <Layers className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-[#17365D]">SAP S/4HANA & ERP</h4>
-                      <p className="text-xs text-[#263442]/80 mt-0.5">
-                        Core implementation, migration, and SLA maintenance.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Layer 3: Integration & Talent */}
-                  <div className="bg-white/95 text-[#263442] rounded-lg p-3.5 shadow-sm flex items-start gap-3">
-                    <div className="p-2 rounded bg-slate-100 text-[#263442] shrink-0 mt-0.5">
-                      <Users2 className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-[#17365D]">Consulting & Staffing</h4>
-                      <p className="text-xs text-[#263442]/80 mt-0.5">
-                        Strategic tech advisory and on-demand engineering pods.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Footer status notice */}
-                <div className="pt-3 border-t border-white/15 flex items-center justify-between text-xs text-slate-300">
-                  <span>Chennai, Tamil Nadu, India</span>
-                  <span className="font-semibold text-white">Verified Practice</span>
-                </div>
-              </div>
+            {/* CTAs */}
+            <div className="flex flex-wrap items-center gap-4 pt-2">
+              <Button to="/services" variant="primary" size="lg" icon={ArrowRight}>
+                Explore Our Services
+              </Button>
+              <Button to="/contact" variant="outlineWhite" size="lg">
+                Contact Us
+              </Button>
             </div>
 
+            {/* Trust highlights bar */}
+            <div className="pt-6 border-t border-white/20 grid grid-cols-3 gap-4 text-left max-w-lg">
+              <div>
+                <span className="block text-xl sm:text-2xl font-bold text-white">2019</span>
+                <span className="text-xs text-slate-200">Founded in Chennai</span>
+              </div>
+              <div>
+                <span className="block text-xl sm:text-2xl font-bold text-[#267C78]">SAP S/4HANA</span>
+                <span className="text-xs text-slate-200">Core Practice</span>
+              </div>
+              <div>
+                <span className="block text-xl sm:text-2xl font-bold text-white">AI & ML</span>
+                <span className="text-xs text-slate-200">Digital Solutions</span>
+              </div>
+            </div>
           </div>
         </div>
+
+        {/* Leadership Session Caption Tag on the Right */}
+        <div className="hidden lg:flex absolute bottom-6 right-8 z-20 items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#17365D]/80 backdrop-blur-md border border-white/20 text-white text-xs shadow-lg">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="font-medium tracking-wide">Dr. Manimaran • Distinct Systems Leadership Session</span>
+        </div>
       </section>
+
+      {/* Floating Architecture 3-Card Deck (Positioned below Hero, leaving the hero photo completely open & visible) */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-card hover:shadow-card-hover transition-all flex items-start gap-3.5">
+            <div className="p-2.5 rounded-lg bg-[#267C78]/10 text-[#267C78] shrink-0">
+              <Cpu className="w-5 h-5" />
+            </div>
+            <div>
+              <h4 className="text-sm font-bold text-[#17365D]">AI & Data Science</h4>
+              <p className="text-xs text-[#263442]/80 mt-0.5 leading-relaxed">
+                Predictive algorithms, machine learning pipelines, and automated intelligence.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-card hover:shadow-card-hover transition-all flex items-start gap-3.5">
+            <div className="p-2.5 rounded-lg bg-[#17365D]/10 text-[#17365D] shrink-0">
+              <Layers className="w-5 h-5" />
+            </div>
+            <div>
+              <h4 className="text-sm font-bold text-[#17365D]">SAP S/4HANA & ERP</h4>
+              <p className="text-xs text-[#263442]/80 mt-0.5 leading-relaxed">
+                Core implementation, smooth digital migration, and SLA-governed maintenance.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-card hover:shadow-card-hover transition-all flex items-start gap-3.5">
+            <div className="p-2.5 rounded-lg bg-[#267C78]/10 text-[#267C78] shrink-0">
+              <Users2 className="w-5 h-5" />
+            </div>
+            <div>
+              <h4 className="text-sm font-bold text-[#17365D]">Consulting & Staffing</h4>
+              <p className="text-xs text-[#263442]/80 mt-0.5 leading-relaxed">
+                Strategic technology advisory and specialized on-demand engineering pods.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* 2. COMPANY INTRODUCTION / VERIFIED PROFILE */}
       <section className="py-14">
