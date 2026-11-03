@@ -26,9 +26,9 @@ import CertificationsSection from '../components/CertificationsSection';
 export const Home = () => {
   return (
     <div className="space-y-0">
-      {/* 1. HERO SECTION WITH CRISP HD BACKGROUND PHOTO */}
+      {/* 1. HERO SECTION WITH ORIGINAL LEADERSHIP PHOTO */}
       <section className="relative overflow-hidden bg-[#17365D] text-white py-16 sm:py-24 lg:py-32">
-        {/* Hardware-Accelerated Razor-Sharp 2.5K Image (2560x1920) */}
+        {/* Exact Uploaded Original Photo */}
         <img
           src="/hero-bg.jpg"
           alt="Distinct Systems Executive Leadership & Training Session - Dr. Manimaran"
@@ -37,9 +37,8 @@ export const Home = () => {
           fetchPriority="high"
           decoding="sync"
         />
-        {/* Directional gradient: Rich navy strictly over the text column on the left; right side is completely transparent and crystal clear so Dr. Manimaran is sharp, bright, and visible */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/80 to-transparent lg:w-[52%] pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#17365D]/40 via-transparent to-transparent pointer-events-none" />
+        {/* Gradient strictly over left text; right half is 100% natural, clear, and untouched */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/80 to-transparent lg:w-[50%] pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl space-y-6">
