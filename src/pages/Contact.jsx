@@ -89,15 +89,15 @@ export const Contact = () => {
       
       {/* 1. Page Header with Attractive Hero Background */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-2xl bg-[#0e223b] text-white p-8 sm:p-14 shadow-card min-h-[320px] flex items-center">
+        <div className="relative overflow-hidden rounded-2xl bg-[#17365D] text-white p-8 sm:p-14 shadow-card min-h-[320px] flex items-center">
           <div 
             className="absolute inset-0 bg-cover bg-right md:bg-center"
             style={{ backgroundImage: `url('/contact-hero-bg.jpg')` }}
           />
-          {/* Subtle directional gradient so text on left is crystal clear while glowing icons & headset on the right stay 100% vibrant */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0d1e33] via-[#0d1e33]/70 md:via-transparent to-transparent" />
+          {/* Directional left overlay to preserve crisp contrast for heading while showcasing the enterprise team on the right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#17365D] via-[#17365D]/80 md:via-[#17365D]/30 to-transparent" />
 
-          <div className="relative z-10 max-w-xl space-y-3">
+          <div className="relative z-10 max-w-2xl space-y-3">
             <span className="text-xs font-bold uppercase tracking-wider text-[#267C78] px-3 py-1 rounded bg-white/10 backdrop-blur-sm inline-block">
               Direct Engagement
             </span>
