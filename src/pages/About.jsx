@@ -146,6 +146,70 @@ export const About = () => {
         </div>
       </section>
 
+      {/* 3. Culture in Action: Collaborative Engineering & Design Thinking */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-white rounded-2xl border border-slate-200/90 p-6 sm:p-10 lg:p-12 shadow-card overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            {/* Left Narrative */}
+            <div className="lg:col-span-7 space-y-5">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#267C78] bg-[#267C78]/10 px-3 py-1 rounded-full inline-block">
+                Our Culture in Action
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#17365D] tracking-tight">
+                Collaborative Problem-Solving & Design Thinking
+              </h2>
+              <p className="text-sm sm:text-base text-[#263442] leading-relaxed">
+                At Distinct Systems, innovation is rooted in hands-on collaboration. Our engineers, business analysts, and solution architects actively engage in structured design thinking workshops, agile sprint planning, and architectural mapping.
+              </p>
+              <p className="text-sm text-[#263442]/80 leading-relaxed">
+                Whether blueprinting an enterprise SAP S/4HANA rollout, designing predictive AI data pipelines, or solving complex systems telemetry, our teams build consensus through active ideation, peer review, and disciplined technical strategy.
+              </p>
+
+              <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                <div className="bg-[#F2F5F7] p-3.5 rounded-lg border border-slate-200/80 flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-[#267C78] shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-bold text-[#17365D]">Design Thinking Ideation</span>
+                    <p className="text-slate-600 mt-0.5">Iterative sprint discovery and architecture alignment.</p>
+                  </div>
+                </div>
+                <div className="bg-[#F2F5F7] p-3.5 rounded-lg border border-slate-200/80 flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-[#267C78] shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-bold text-[#17365D]">Cross-Functional Pods</span>
+                    <p className="text-slate-600 mt-0.5">Engineers and domain leads co-designing client solutions.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Photo Frame */}
+            <div className="lg:col-span-5">
+              <div className="group relative rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-[#F2F5F7]">
+                <img
+                  src="/about/collaboration-workshops.jpg"
+                  alt="Distinct Systems Engineering Team Collaborative Workshop & Strategy Session"
+                  className="w-full h-auto max-h-[520px] object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#17365D]/90 via-[#17365D]/30 to-transparent pointer-events-none" />
+                
+                {/* Overlay Caption Tag */}
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#267C78] block">
+                    Strategic Workshop Session
+                  </span>
+                  <p className="text-xs sm:text-sm font-medium text-slate-100 mt-0.5 drop-shadow-sm">
+                    Distinct Systems team in interactive sprint planning and architecture ideation.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* 3. Proposed Mission & Vision */}
       <section className="bg-[#F2F5F7] py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
