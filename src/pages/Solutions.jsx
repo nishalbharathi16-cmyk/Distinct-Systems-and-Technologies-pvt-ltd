@@ -46,7 +46,7 @@ export const Solutions = () => {
             <div 
               key={sol.id} 
               id={sol.id}
-              className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-[#0e223b] shadow-card transition-all duration-300 hover:shadow-card-hover group min-h-[500px] flex items-center"
+              className="relative overflow-hidden rounded-2xl border border-slate-700/60 bg-[#0a1829] shadow-2xl transition-all duration-300 hover:shadow-card-hover group min-h-[500px] flex items-center"
             >
               {/* 1. Full-Bleed High-Tech Background Image */}
               <div 
@@ -54,48 +54,48 @@ export const Solutions = () => {
                 style={{ backgroundImage: `url('${visual.image}')` }}
               />
 
-              {/* 2. Frosted Glassmorphism Backdrop Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/90 md:via-white/80 to-white/30 md:to-transparent backdrop-blur-[2px] md:backdrop-blur-none" />
+              {/* 2. Dark Ambient Frosted Glass Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0a1829]/95 via-[#0d2038]/90 md:via-[#0e223b]/80 to-black/40 md:to-transparent backdrop-blur-[2px] md:backdrop-blur-none" />
 
               {/* 3. Text & Content Layer */}
               <div className="relative z-10 w-full p-6 sm:p-10 lg:p-12 max-w-3xl">
                 <div className="space-y-5">
                   <div className="flex items-center gap-2.5">
-                    <span className="text-xs font-bold tracking-wider uppercase text-[#267C78] bg-[#267C78]/15 px-2.5 py-1 rounded-md border border-[#267C78]/25 backdrop-blur-sm">
+                    <span className="text-xs font-bold tracking-wider uppercase text-[#4dd0c9] bg-[#267C78]/25 px-2.5 py-1 rounded-md border border-[#267C78]/40 backdrop-blur-sm">
                       {sol.category}
                     </span>
-                    <span className="text-xs font-semibold text-[#17365D]/80">
+                    <span className="text-xs font-semibold text-slate-300">
                       Solution Architecture 0{index + 1}
                     </span>
                   </div>
 
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-[#17365D] tracking-tight">
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight drop-shadow-sm">
                     {sol.title}
                   </h3>
 
-                  <p className="text-sm sm:text-base text-[#263442] leading-relaxed max-w-xl font-medium">
+                  <p className="text-sm sm:text-base text-slate-200 leading-relaxed max-w-xl font-normal drop-shadow-sm">
                     {sol.summary}
                   </p>
 
                   {/* Measurable Business Impact Box */}
-                  <div className="bg-white/85 backdrop-blur-md p-4 sm:p-5 rounded-xl border border-slate-200/90 shadow-sm max-w-xl">
-                    <span className="text-xs font-extrabold uppercase tracking-wider text-[#17365D] block mb-1">
+                  <div className="bg-white/10 backdrop-blur-md p-4 sm:p-5 rounded-xl border border-white/15 shadow-sm max-w-xl">
+                    <span className="text-xs font-extrabold uppercase tracking-wider text-[#4dd0c9] block mb-1">
                       Business Outcome & Operational Impact
                     </span>
-                    <p className="text-xs sm:text-sm text-[#263442] leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-100 leading-relaxed">
                       {sol.impact}
                     </p>
                   </div>
 
                   {/* Core Capabilities */}
                   <div className="space-y-2 pt-1 max-w-xl">
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#17365D] block">
+                    <span className="text-xs font-bold uppercase tracking-wider text-slate-300 block">
                       Core Capabilities
                     </span>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                       {sol.capabilities.map((cap, cIdx) => (
-                        <div key={cIdx} className="flex items-start gap-2 text-xs font-medium text-[#263442]">
-                          <CheckCircle2 className="w-4 h-4 text-[#267C78] shrink-0 mt-0.5" />
+                        <div key={cIdx} className="flex items-start gap-2 text-xs font-medium text-slate-200">
+                          <CheckCircle2 className="w-4 h-4 text-[#4dd0c9] shrink-0 mt-0.5" />
                           <span>{cap}</span>
                         </div>
                       ))}
@@ -112,7 +112,7 @@ export const Solutions = () => {
                     >
                       Inquire About {sol.title.split('&')[0].trim()}
                     </Button>
-                    <span className="text-xs text-[#263442]/70 font-semibold">
+                    <span className="text-xs text-slate-300 font-semibold">
                       High Availability Standard
                     </span>
                   </div>
@@ -121,8 +121,8 @@ export const Solutions = () => {
 
               {/* Floating Bottom Right Badge */}
               <div className="hidden lg:block absolute bottom-6 right-6 z-10">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#17365D]/90 backdrop-blur-md border border-white/20 text-xs font-semibold text-white shadow-lg">
-                  <Sparkles className="w-3.5 h-3.5 text-[#267C78]" />
+                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0e223b]/90 backdrop-blur-md border border-white/20 text-xs font-semibold text-white shadow-lg">
+                  <Sparkles className="w-3.5 h-3.5 text-[#4dd0c9]" />
                   <span>{visual.tag}</span>
                 </div>
               </div>
