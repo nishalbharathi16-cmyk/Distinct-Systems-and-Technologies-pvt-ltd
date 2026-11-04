@@ -136,13 +136,13 @@ export const Careers = () => {
       
       {/* 1. Header with Attractive Hero Background */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-2xl bg-[#0a1829] text-white p-8 sm:p-14 shadow-2xl border border-slate-700/60 min-h-[380px] sm:min-h-[420px] flex items-center">
+        <div className="relative overflow-hidden rounded-2xl bg-[#0a1829] text-white p-8 sm:p-14 shadow-2xl border border-slate-700/60 min-h-[380px] sm:min-h-[440px] flex items-center group">
           <div 
-            className="absolute inset-0 bg-cover bg-right md:bg-center"
+            className="absolute inset-0 bg-cover bg-right md:bg-center transition-transform duration-700 ease-out group-hover:scale-105"
             style={{ backgroundImage: `url('/careers-hero-bg.jpg')` }}
           />
-          {/* Enhanced atmospheric dark gradient so text on left is crystal clear while the engineering team & presentation on the right stay 100% sharp and vibrant */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1829]/95 via-[#0d2038]/90 md:via-[#0e223b]/65 to-black/30 md:to-transparent" />
+          {/* Enhanced atmospheric dark gradient so text on left is crystal clear while the engineering team on the right stays 100% sharp and vibrant */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1829]/95 via-[#0d2038]/90 md:via-[#0e223b]/60 to-black/30 md:to-transparent" />
 
           <div className="relative z-10 max-w-xl space-y-3.5">
             <span className="text-xs font-bold uppercase tracking-wider text-[#4dd0c9] px-3 py-1 rounded-md bg-[#267C78]/25 border border-[#267C78]/40 backdrop-blur-md inline-block shadow-sm">
