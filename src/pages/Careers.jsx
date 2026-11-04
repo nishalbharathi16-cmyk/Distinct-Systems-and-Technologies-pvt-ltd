@@ -136,35 +136,35 @@ export const Careers = () => {
       
       {/* 1. Header with Attractive Hero Background */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-2xl bg-[#0e223b] text-white p-8 sm:p-14 shadow-card min-h-[320px] flex items-center">
+        <div className="relative overflow-hidden rounded-2xl bg-[#0a1829] text-white p-8 sm:p-14 shadow-2xl border border-slate-700/60 min-h-[380px] sm:min-h-[420px] flex items-center">
           <div 
             className="absolute inset-0 bg-cover bg-right md:bg-center"
             style={{ backgroundImage: `url('/careers-hero-bg.jpg')` }}
           />
-          {/* Subtle directional gradient so text on left is crystal clear while the engineering team & presentation on the right stay 100% sharp and vibrant */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0d1e33] via-[#0d1e33]/70 md:via-transparent to-transparent" />
+          {/* Enhanced atmospheric dark gradient so text on left is crystal clear while the engineering team & presentation on the right stay 100% sharp and vibrant */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1829]/95 via-[#0d2038]/90 md:via-[#0e223b]/65 to-black/30 md:to-transparent" />
 
-          <div className="relative z-10 max-w-xl space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#267C78] px-3 py-1 rounded bg-white/10 backdrop-blur-sm inline-block">
+          <div className="relative z-10 max-w-xl space-y-3.5">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#4dd0c9] px-3 py-1 rounded-md bg-[#267C78]/25 border border-[#267C78]/40 backdrop-blur-md inline-block shadow-sm">
               Talent Bench & Careers
             </span>
-            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight drop-shadow-sm">
+            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight drop-shadow-md text-white">
               Careers at Distinct Systems and Technologies
             </h1>
-            <p className="text-sm sm:text-base text-slate-100 leading-relaxed drop-shadow-sm">
+            <p className="text-sm sm:text-base text-slate-200 leading-relaxed drop-shadow-sm font-normal">
               We collaborate with skilled technologists, data scientists, and enterprise SAP consultants who appreciate engineering discipline and continuous growth.
             </p>
           </div>
         </div>
 
         {/* Transparent Openings Notice */}
-        <div className="bg-[#F2F5F7] rounded-xl p-4 border border-slate-200 mt-6 flex items-start gap-3">
-          <AlertCircle className="w-4 h-4 text-[#267C78] shrink-0 mt-0.5" />
-          <div className="text-xs sm:text-sm text-[#263442]/85 space-y-0.5">
-            <span className="font-semibold text-[#17365D] block">
+        <div className="bg-[#0a1829] rounded-xl p-4 sm:p-5 border border-slate-700/60 mt-6 flex items-start gap-3.5 shadow-xl">
+          <AlertCircle className="w-5 h-5 text-[#4dd0c9] shrink-0 mt-0.5" />
+          <div className="text-xs sm:text-sm text-slate-200 space-y-1">
+            <span className="font-bold text-white block text-sm">
               General Talent Pool & Career Inquiries
             </span>
-            <p>
+            <p className="text-slate-300">
               Distinct Systems evaluates experienced technical profiles for our consulting talent bench and staff augmentation assignments. Submit your profile below for upcoming project deployments.
             </p>
           </div>
@@ -185,28 +185,28 @@ export const Careers = () => {
             return (
               <div 
                 key={idx} 
-                className="group relative overflow-hidden rounded-xl border border-slate-200 bg-white shadow-subtle hover:shadow-card-hover transition-all duration-300 flex flex-col"
+                className="group relative overflow-hidden rounded-2xl border border-slate-700/60 bg-[#0a1829] shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col"
               >
                 {/* Visual Header with Image and Overlay */}
-                <div className="relative h-40 overflow-hidden">
+                <div className="relative h-44 overflow-hidden">
                   <img 
                     src={pillar.image} 
                     alt={pillar.title} 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#17365D]/95 via-[#17365D]/50 to-black/30" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a1829] via-[#0d2038]/60 to-black/30" />
                   <div className="absolute bottom-3 left-4 right-4 flex items-center gap-3 text-white">
-                    <div className="w-9 h-9 rounded-lg bg-[#267C78] text-white flex items-center justify-center shadow shrink-0">
-                      <Icon className="w-4 h-4" />
+                    <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md text-[#4dd0c9] flex items-center justify-center border border-white/15 shadow-sm shrink-0">
+                      <Icon className="w-5 h-5 text-[#4dd0c9]" />
                     </div>
                     <h4 className="text-base font-bold text-white drop-shadow-sm leading-tight">
                       {pillar.title}
                     </h4>
                   </div>
                 </div>
-                <div className="p-6 flex-1 flex flex-col justify-between">
-                  <p className="text-xs sm:text-sm text-[#263442]/85 leading-relaxed">
+                <div className="p-6 flex-1 flex flex-col justify-between bg-gradient-to-b from-[#0a1829] to-[#0e223b]">
+                  <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
                     {pillar.desc}
                   </p>
                 </div>
@@ -217,19 +217,21 @@ export const Careers = () => {
       </section>
 
       {/* 3. Core Skill Domains with Individual Directly Relevant Background Images */}
-      <section className="bg-[#F2F5F7] py-16">
+      <section className="bg-[#071322] py-16 border-y border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Skill Categories"
-            title="Technical Areas of Continuous Interest"
-            description="We frequently review profiles across the following core technical domains for project staffing and advisory roles."
-          />
+          <div className="text-white">
+            <SectionHeading
+              eyebrow="Skill Categories"
+              title="Technical Areas of Continuous Interest"
+              description="We frequently review profiles across the following core technical domains for project staffing and advisory roles."
+            />
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {SKILL_DOMAINS.map((domain) => (
               <div 
                 key={domain.id} 
-                className="group bg-white rounded-xl border border-slate-200 overflow-hidden shadow-subtle hover:shadow-card-hover transition-all duration-300 flex flex-col"
+                className="group bg-[#0a1829] rounded-2xl border border-slate-700/60 overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col"
               >
                 {/* Individual Background Image Header */}
                 <div className="relative h-44 overflow-hidden">
@@ -239,8 +241,8 @@ export const Careers = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#17365D]/95 via-[#17365D]/50 to-transparent" />
-                  <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider text-white bg-[#267C78] px-2.5 py-1 rounded shadow">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a1829] via-[#0d2038]/60 to-black/30" />
+                  <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider text-[#4dd0c9] bg-[#267C78]/30 border border-[#267C78]/50 px-2.5 py-1 rounded-md backdrop-blur-md shadow">
                     {domain.badge}
                   </span>
                   <h4 className="absolute bottom-3 left-4 right-4 text-base font-bold text-white drop-shadow-sm leading-snug">
@@ -249,26 +251,26 @@ export const Careers = () => {
                 </div>
 
                 {/* Card Content */}
-                <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                  <p className="text-xs sm:text-sm text-[#263442]/85 leading-relaxed">
+                <div className="p-5 flex-1 flex flex-col justify-between space-y-4 bg-gradient-to-b from-[#0a1829] to-[#0e223b]">
+                  <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
                     {domain.description}
                   </p>
-                  <div>
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#17365D] block mb-1">
+                  <div className="bg-white/5 p-3 rounded-lg border border-white/10">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#4dd0c9] block mb-1">
                       Key Competencies
                     </span>
-                    <p className="text-xs text-slate-500 leading-relaxed">
+                    <p className="text-xs text-slate-300 leading-relaxed">
                       {domain.skills}
                     </p>
                   </div>
-                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                    <span className="text-[11px] font-semibold text-[#267C78] flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-[#267C78] animate-pulse"></span>
+                  <div className="pt-3 border-t border-slate-700/60 flex items-center justify-between">
+                    <span className="text-[11px] font-semibold text-[#4dd0c9] flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-[#4dd0c9] animate-pulse"></span>
                       Bench Active
                     </span>
                     <a
                       href="#apply"
-                      className="text-xs font-semibold text-[#17365D] hover:text-[#267C78] inline-flex items-center gap-1 transition-colors"
+                      className="text-xs font-semibold text-white hover:text-[#4dd0c9] inline-flex items-center gap-1 transition-colors"
                     >
                       <span>Apply</span>
                       <ArrowRight className="w-3 h-3" />
@@ -285,14 +287,14 @@ export const Careers = () => {
       <section id="apply" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
           {/* Form Top Banner with attractive background image */}
-          <div className="relative bg-[#17365D] text-white p-6 sm:p-8 overflow-hidden">
+          <div className="relative bg-[#0a1829] text-white p-6 sm:p-8 overflow-hidden border-b border-slate-700/60">
             <div 
-              className="absolute inset-0 bg-cover bg-center opacity-30"
+              className="absolute inset-0 bg-cover bg-center opacity-40"
               style={{ backgroundImage: `url('/industries/enterprise.jpg')` }}
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#17365D]/95 via-[#17365D]/85 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0a1829]/95 via-[#0d2038]/85 to-transparent" />
             <div className="relative z-10 space-y-1.5">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#267C78] px-2.5 py-1 rounded bg-white/10 inline-block">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#4dd0c9] px-2.5 py-1 rounded-md bg-[#267C78]/25 border border-[#267C78]/40 inline-block">
                 General Career Inquiry
               </span>
               <h3 className="text-xl sm:text-2xl font-bold text-white">
@@ -395,6 +397,7 @@ export const Careers = () => {
                     <option value="Data Science & BI">Data Science & Advanced Analytics</option>
                     <option value="SAP S/4HANA Implementation">SAP S/4HANA & ERP Modules</option>
                     <option value="Technology Consulting">Technology Consulting & Architecture</option>
+                    <option value="Education & Digital Learning">Education & Digital Learning Systems</option>
                     <option value="Full-Stack Engineering">Full-Stack Software Development</option>
                     <option value="Cloud & DevOps">Cloud Infrastructure & DevOps</option>
                   </select>
