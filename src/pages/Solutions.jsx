@@ -14,11 +14,11 @@ import Button from '../components/Button';
 import { SOLUTIONS } from '../data/services';
 
 const solutionVisuals = {
-  'intelligent-tech': { icon: Cpu, image: '/services/ai-ml.jpg', tag: 'AI & Cognitive Automation' },
-  'enterprise-solutions': { icon: Layers, image: '/services/sap-implementation.jpg', tag: 'ERP & Core Architecture' },
-  'data-driven': { icon: BarChart3, image: '/services/data-science.jpg', tag: 'Telemetry & Analytics' },
-  'digital-transformation': { icon: Workflow, image: '/services/tech-consulting.jpg', tag: 'Cloud & Modernization' },
-  'tech-integration': { icon: Network, image: '/services/sap-support.jpg', tag: 'Connected Systems & IoT' },
+  'intelligent-tech': { icon: Cpu, image: '/solutions/intelligent-tech.jpg', tag: 'AI & Cognitive Automation' },
+  'enterprise-solutions': { icon: Layers, image: '/solutions/enterprise-solutions.jpg', tag: 'ERP & Core Architecture' },
+  'data-driven': { icon: BarChart3, image: '/solutions/data-driven.jpg', tag: 'Telemetry & Analytics' },
+  'digital-transformation': { icon: Workflow, image: '/solutions/digital-transformation.jpg', tag: 'Cloud & Modernization' },
+  'tech-integration': { icon: Network, image: '/solutions/tech-integration.jpg', tag: 'Connected Systems & IoT' },
 };
 
 export const Solutions = () => {
@@ -40,65 +40,70 @@ export const Solutions = () => {
       {/* 2. Solutions Showcase with Relevant Visuals */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {SOLUTIONS.map((sol, index) => {
-          const visual = solutionVisuals[sol.id] || { icon: Cpu, image: '/services/ai-ml.jpg', tag: 'Architecture' };
-          const Icon = visual.icon;
-          const isReversed = index % 2 === 1;
+          const visual = solutionVisuals[sol.id] || { icon: Cpu, image: '/solutions/intelligent-tech.jpg', tag: 'Architecture' };
 
           return (
             <div 
               key={sol.id} 
               id={sol.id}
-              className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:shadow-card-hover"
+              className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-[#0e223b] shadow-card transition-all duration-300 hover:shadow-card-hover group min-h-[500px] flex items-center"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
-                
-                {/* Content */}
-                <div className={`lg:col-span-7 p-6 sm:p-10 lg:p-12 flex flex-col justify-between ${
-                  isReversed ? 'lg:order-2' : 'lg:order-1'
-                }`}>
-                  <div className="space-y-5">
-                    <div className="flex items-center gap-2.5">
-                      <span className="text-xs font-bold tracking-wider uppercase text-[#267C78] bg-[#267C78]/10 px-2.5 py-1 rounded">
-                        {sol.category}
-                      </span>
-                      <span className="text-xs text-[#263442]/60">Solution Architecture 0{index + 1}</span>
-                    </div>
+              {/* 1. Full-Bleed High-Tech Background Image */}
+              <div 
+                className="absolute inset-0 bg-cover bg-right md:bg-center transition-transform duration-700 ease-out group-hover:scale-105"
+                style={{ backgroundImage: `url('${visual.image}')` }}
+              />
 
-                    <h3 className="text-xl sm:text-2xl font-bold text-[#17365D]">
-                      {sol.title}
-                    </h3>
+              {/* 2. Frosted Glassmorphism Backdrop Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/90 md:via-white/80 to-white/30 md:to-transparent backdrop-blur-[2px] md:backdrop-blur-none" />
 
-                    <p className="text-sm sm:text-base text-[#263442] leading-relaxed">
-                      {sol.summary}
+              {/* 3. Text & Content Layer */}
+              <div className="relative z-10 w-full p-6 sm:p-10 lg:p-12 max-w-3xl">
+                <div className="space-y-5">
+                  <div className="flex items-center gap-2.5">
+                    <span className="text-xs font-bold tracking-wider uppercase text-[#267C78] bg-[#267C78]/15 px-2.5 py-1 rounded-md border border-[#267C78]/25 backdrop-blur-sm">
+                      {sol.category}
+                    </span>
+                    <span className="text-xs font-semibold text-[#17365D]/80">
+                      Solution Architecture 0{index + 1}
+                    </span>
+                  </div>
+
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-[#17365D] tracking-tight">
+                    {sol.title}
+                  </h3>
+
+                  <p className="text-sm sm:text-base text-[#263442] leading-relaxed max-w-xl font-medium">
+                    {sol.summary}
+                  </p>
+
+                  {/* Measurable Business Impact Box */}
+                  <div className="bg-white/85 backdrop-blur-md p-4 sm:p-5 rounded-xl border border-slate-200/90 shadow-sm max-w-xl">
+                    <span className="text-xs font-extrabold uppercase tracking-wider text-[#17365D] block mb-1">
+                      Business Outcome & Operational Impact
+                    </span>
+                    <p className="text-xs sm:text-sm text-[#263442] leading-relaxed">
+                      {sol.impact}
                     </p>
+                  </div>
 
-                    {/* Measurable Business Impact Box */}
-                    <div className="bg-[#F2F5F7] p-4 rounded-lg border-l-4 border-[#17365D]">
-                      <span className="text-xs font-bold uppercase tracking-wider text-[#17365D] block mb-1">
-                        Business Outcome & Operational Impact
-                      </span>
-                      <p className="text-xs sm:text-sm text-[#263442] leading-relaxed">
-                        {sol.impact}
-                      </p>
-                    </div>
-
-                    {/* Core Capabilities */}
-                    <div className="space-y-2 pt-1">
-                      <span className="text-xs font-bold uppercase tracking-wider text-[#17365D] block">
-                        Core Capabilities
-                      </span>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                        {sol.capabilities.map((cap, cIdx) => (
-                          <div key={cIdx} className="flex items-start gap-2 text-xs text-[#263442]">
-                            <CheckCircle2 className="w-4 h-4 text-[#267C78] shrink-0 mt-0.5" />
-                            <span>{cap}</span>
-                          </div>
-                        ))}
-                      </div>
+                  {/* Core Capabilities */}
+                  <div className="space-y-2 pt-1 max-w-xl">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#17365D] block">
+                      Core Capabilities
+                    </span>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                      {sol.capabilities.map((cap, cIdx) => (
+                        <div key={cIdx} className="flex items-start gap-2 text-xs font-medium text-[#263442]">
+                          <CheckCircle2 className="w-4 h-4 text-[#267C78] shrink-0 mt-0.5" />
+                          <span>{cap}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
 
-                  <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+                  {/* Action Bar */}
+                  <div className="pt-4 flex flex-wrap items-center gap-4">
                     <Button 
                       to={`/contact?solution=${encodeURIComponent(sol.title)}`} 
                       variant="primary" 
@@ -107,35 +112,19 @@ export const Solutions = () => {
                     >
                       Inquire About {sol.title.split('&')[0].trim()}
                     </Button>
-                    <span className="text-xs text-slate-400 hidden sm:inline">
+                    <span className="text-xs text-[#263442]/70 font-semibold">
                       High Availability Standard
                     </span>
                   </div>
                 </div>
+              </div>
 
-                {/* Relevant Themed Visual Panel */}
-                <div className={`lg:col-span-5 relative min-h-[280px] sm:min-h-[340px] lg:min-h-full overflow-hidden ${
-                  isReversed ? 'lg:order-1' : 'lg:order-2'
-                }`}>
-                  <img
-                    src={visual.image}
-                    alt={`${sol.title} Visual Framework`}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#17365D]/80 via-transparent to-black/20" />
-
-                  <div className="absolute bottom-5 left-5 right-5 text-white">
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#17365D]/90 backdrop-blur-md border border-white/20 text-xs font-semibold text-white shadow-lg mb-1">
-                      <Sparkles className="w-3.5 h-3.5 text-[#267C78]" />
-                      <span>{visual.tag}</span>
-                    </div>
-                    <p className="text-[11px] text-slate-200 drop-shadow-sm">
-                      Distinct Systems Architectural Blueprint
-                    </p>
-                  </div>
+              {/* Floating Bottom Right Badge */}
+              <div className="hidden lg:block absolute bottom-6 right-6 z-10">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#17365D]/90 backdrop-blur-md border border-white/20 text-xs font-semibold text-white shadow-lg">
+                  <Sparkles className="w-3.5 h-3.5 text-[#267C78]" />
+                  <span>{visual.tag}</span>
                 </div>
-
               </div>
             </div>
           );

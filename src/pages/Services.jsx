@@ -59,69 +59,74 @@ export const Services = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {SERVICES.map((service, index) => {
           const IconComponent = iconMap[service.icon] || Layers;
-          const isReversed = index % 2 === 1;
 
           return (
             <div
               key={service.id}
               id={service.id}
-              className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:shadow-card-hover"
+              className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-[#0e223b] shadow-card transition-all duration-300 hover:shadow-card-hover group min-h-[500px] flex items-center"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
-                
-                {/* Content Column */}
-                <div className={`lg:col-span-7 p-6 sm:p-10 lg:p-12 flex flex-col justify-between ${
-                  isReversed ? 'lg:order-2' : 'lg:order-1'
-                }`}>
-                  <div className="space-y-5">
-                    {/* Header badge & title */}
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-[#F2F5F7] text-[#267C78] flex items-center justify-center border border-slate-200 shadow-subtle">
-                        <IconComponent className="w-6 h-6 text-[#267C78]" />
-                      </div>
-                      <div>
-                        <span className="text-xs font-bold uppercase tracking-wider text-[#267C78]">
-                          Practice 0{index + 1}
-                        </span>
-                        <h3 className="text-xl sm:text-2xl font-bold text-[#17365D]">
-                          {service.title}
-                        </h3>
-                      </div>
+              {/* 1. Full-Bleed High-Resolution Service Visual */}
+              <div 
+                className={`absolute inset-0 bg-cover transition-transform duration-700 ease-out group-hover:scale-105 ${
+                  service.id === 'education-tech' ? 'bg-left' : 'bg-right md:bg-center'
+                }`}
+                style={{ backgroundImage: `url('${service.bgImage}')` }}
+              />
+
+              {/* 2. Frosted Glassmorphism Backdrop Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/90 md:via-white/80 to-white/30 md:to-transparent backdrop-blur-[2px] md:backdrop-blur-none" />
+
+              {/* 3. Text & Content Layer */}
+              <div className="relative z-10 w-full p-6 sm:p-10 lg:p-12 max-w-3xl">
+                <div className="space-y-5">
+                  {/* Header badge & title */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-11 h-11 rounded-xl bg-white/90 backdrop-blur-md text-[#267C78] flex items-center justify-center border border-slate-200 shadow-sm">
+                      <IconComponent className="w-5 h-5 text-[#267C78]" />
                     </div>
-
-                    {/* Short Description */}
-                    <p className="text-sm sm:text-base text-[#263442] leading-relaxed">
-                      {service.shortDesc}
-                    </p>
-
-                    {/* Business Value Highlight Box */}
-                    <div className="bg-[#F2F5F7] rounded-lg p-4 border-l-4 border-[#267C78]">
-                      <span className="text-xs font-bold uppercase tracking-wider text-[#17365D] block mb-1">
-                        Strategic Enterprise Value
+                    <div>
+                      <span className="text-xs font-bold uppercase tracking-wider text-[#267C78] bg-[#267C78]/10 px-2.5 py-0.5 rounded-md border border-[#267C78]/20 inline-block">
+                        Practice 0{index + 1}
                       </span>
-                      <p className="text-xs sm:text-sm text-[#263442] leading-relaxed">
-                        {service.businessValue}
-                      </p>
-                    </div>
-
-                    {/* Capabilities checklist */}
-                    <div className="space-y-2 pt-1">
-                      <span className="text-xs font-bold uppercase tracking-wider text-[#17365D] block">
-                        Core Capabilities
-                      </span>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                        {service.features.map((feat, fIdx) => (
-                          <div key={fIdx} className="flex items-start gap-2 text-xs text-[#263442]">
-                            <CheckCircle2 className="w-4 h-4 text-[#267C78] shrink-0 mt-0.5" />
-                            <span>{feat}</span>
-                          </div>
-                        ))}
-                      </div>
+                      <h3 className="text-2xl sm:text-3xl font-extrabold text-[#17365D] tracking-tight mt-1">
+                        {service.title}
+                      </h3>
                     </div>
                   </div>
 
-                  {/* Action Bar */}
-                  <div className="pt-6 mt-6 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
+                  {/* Short Description */}
+                  <p className="text-sm sm:text-base text-[#263442] leading-relaxed max-w-xl font-medium">
+                    {service.shortDesc}
+                  </p>
+
+                  {/* Business Value Highlight Box */}
+                  <div className="bg-white/85 backdrop-blur-md p-4 sm:p-5 rounded-xl border border-slate-200/90 shadow-sm max-w-xl">
+                    <span className="text-xs font-extrabold uppercase tracking-wider text-[#17365D] block mb-1">
+                      Strategic Enterprise Value
+                    </span>
+                    <p className="text-xs sm:text-sm text-[#263442] leading-relaxed">
+                      {service.businessValue}
+                    </p>
+                  </div>
+
+                  {/* Capabilities checklist */}
+                  <div className="space-y-2 pt-1 max-w-xl">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#17365D] block">
+                      Core Capabilities
+                    </span>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                      {service.features.map((feat, fIdx) => (
+                        <div key={fIdx} className="flex items-start gap-2 text-xs font-medium text-[#263442]">
+                          <CheckCircle2 className="w-4 h-4 text-[#267C78] shrink-0 mt-0.5" />
+                          <span>{feat}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Action Bar & Tags */}
+                  <div className="pt-4 flex flex-wrap items-center gap-4">
                     <Button 
                       to={`/contact?subject=${encodeURIComponent(service.title)}`} 
                       variant="primary" 
@@ -135,7 +140,7 @@ export const Services = () => {
                       {service.tags.map((tag, tIdx) => (
                         <span 
                           key={tIdx} 
-                          className="text-[11px] font-medium bg-[#F2F5F7] text-[#263442] px-2.5 py-1 rounded"
+                          className="text-[11px] font-semibold bg-white/80 backdrop-blur-sm text-[#17365D] border border-slate-200/80 px-2.5 py-1 rounded-md"
                         >
                           {tag}
                         </span>
@@ -143,33 +148,14 @@ export const Services = () => {
                     </div>
                   </div>
                 </div>
+              </div>
 
-                {/* Relevant Themed Visual Panel */}
-                <div className={`lg:col-span-5 relative min-h-[280px] sm:min-h-[340px] lg:min-h-full overflow-hidden ${
-                  isReversed ? 'lg:order-1' : 'lg:order-2'
-                }`}>
-                  {/* Clean, Full-Resolution Relevant Image */}
-                  <img
-                    src={service.bgImage}
-                    alt={`${service.title} Enterprise Practice Visual`}
-                    className="w-full h-full object-cover object-left transition-transform duration-700 ease-out hover:scale-105"
-                    loading="lazy"
-                  />
-                  {/* Subtle corporate corner vignette for depth and elegance */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#17365D]/80 via-transparent to-black/20" />
-
-                  {/* Visual Overlay Tag */}
-                  <div className="absolute bottom-5 left-5 right-5 text-white">
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#17365D]/90 backdrop-blur-md border border-white/20 text-xs font-semibold text-white shadow-lg mb-1">
-                      <Sparkles className="w-3.5 h-3.5 text-[#267C78]" />
-                      <span>{service.title.split('&')[0].trim()} Practice Visual</span>
-                    </div>
-                    <p className="text-[11px] text-slate-200 drop-shadow-sm">
-                      Distinct Systems Enterprise Core Competency
-                    </p>
-                  </div>
+              {/* Floating Bottom Right Badge */}
+              <div className="hidden lg:block absolute bottom-6 right-6 z-10">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#17365D]/90 backdrop-blur-md border border-white/20 text-xs font-semibold text-white shadow-lg">
+                  <Sparkles className="w-3.5 h-3.5 text-[#267C78]" />
+                  <span>{service.title.split('&')[0].trim()} Core Competency</span>
                 </div>
-
               </div>
             </div>
           );
