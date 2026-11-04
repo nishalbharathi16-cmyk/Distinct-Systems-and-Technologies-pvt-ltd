@@ -60,64 +60,69 @@ export const Industries = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {INDUSTRIES.map((ind, index) => {
           const Icon = industryIcons[ind.id] || Building2;
-          const isReversed = index % 2 === 1;
 
           return (
             <div 
               key={ind.id} 
               id={ind.id}
-              className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card transition-all duration-300 hover:shadow-card-hover"
+              className="relative overflow-hidden rounded-2xl border border-slate-700/60 bg-[#0a1829] shadow-2xl transition-all duration-300 hover:shadow-card-hover group min-h-[500px] flex items-center"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
-                
-                {/* Content Column */}
-                <div className={`lg:col-span-7 p-6 sm:p-10 lg:p-12 flex flex-col justify-between ${
-                  isReversed ? 'lg:order-2' : 'lg:order-1'
-                }`}>
-                  <div className="space-y-5">
-                    {/* Header badge & title */}
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-[#F2F5F7] text-[#267C78] flex items-center justify-center border border-slate-200 shadow-subtle">
-                        <Icon className="w-6 h-6 text-[#267C78]" />
-                      </div>
-                      <div>
-                        <span className="text-xs font-bold uppercase tracking-wider text-[#267C78]">
-                          Sector 0{index + 1} • Application Model
-                        </span>
-                        <h3 className="text-xl sm:text-2xl font-bold text-[#17365D]">
-                          {ind.name}
-                        </h3>
-                      </div>
+              {/* 1. Full-Bleed High-Resolution Domain Visual */}
+              <div 
+                className={`absolute inset-0 bg-cover transition-transform duration-700 ease-out group-hover:scale-105 ${
+                  ind.id === 'education' ? 'bg-left' : 'bg-right md:bg-center'
+                }`}
+                style={{ backgroundImage: `url('${ind.bgImage}')` }}
+              />
+
+              {/* 2. Dark Ambient Frosted Glass Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0a1829]/95 via-[#0d2038]/90 md:via-[#0e223b]/80 to-black/40 md:to-transparent backdrop-blur-[2px] md:backdrop-blur-none" />
+
+              {/* 3. Text & Content Layer */}
+              <div className="relative z-10 w-full p-6 sm:p-10 lg:p-12 max-w-3xl">
+                <div className="space-y-5">
+                  {/* Header badge & title */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-11 h-11 rounded-xl bg-white/10 backdrop-blur-md text-[#4dd0c9] flex items-center justify-center border border-white/15 shadow-sm">
+                      <Icon className="w-5 h-5 text-[#4dd0c9]" />
                     </div>
-
-                    {/* Short Summary */}
-                    <p className="text-sm sm:text-base text-[#263442] leading-relaxed">
-                      {ind.summary}
-                    </p>
-
-                    {/* Targeted Solutions Checklist */}
-                    <div className="space-y-2 pt-1">
-                      <span className="text-xs font-bold uppercase tracking-wider text-[#17365D] block">
-                        Targeted Technical Solutions
+                    <div>
+                      <span className="text-xs font-bold uppercase tracking-wider text-[#4dd0c9] bg-[#267C78]/25 px-2.5 py-0.5 rounded-md border border-[#267C78]/40 inline-block">
+                        Sector 0{index + 1} • Application Model
                       </span>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                        {ind.applications.map((app, aIdx) => (
-                          <div key={aIdx} className="flex items-start gap-2 text-xs text-[#263442]">
-                            <CheckCircle2 className="w-4 h-4 text-[#267C78] shrink-0 mt-0.5" />
-                            <span>{app}</span>
-                          </div>
-                        ))}
-                      </div>
+                      <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mt-1 drop-shadow-sm">
+                        {ind.name}
+                      </h3>
                     </div>
-
-                    {/* Transparent Mapping Notice */}
-                    <p className="text-[11px] text-slate-400 italic pt-2">
-                      {ind.disclaimer}
-                    </p>
                   </div>
 
+                  {/* Short Summary */}
+                  <p className="text-sm sm:text-base text-slate-200 leading-relaxed max-w-xl font-normal drop-shadow-sm">
+                    {ind.summary}
+                  </p>
+
+                  {/* Targeted Technical Solutions Frosted Box */}
+                  <div className="bg-white/10 backdrop-blur-md p-4 sm:p-5 rounded-xl border border-white/15 shadow-sm max-w-xl space-y-2.5">
+                    <span className="text-xs font-extrabold uppercase tracking-wider text-[#4dd0c9] block">
+                      Targeted Technical Solutions
+                    </span>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                      {ind.applications.map((app, aIdx) => (
+                        <div key={aIdx} className="flex items-start gap-2 text-xs font-medium text-slate-200">
+                          <CheckCircle2 className="w-4 h-4 text-[#4dd0c9] shrink-0 mt-0.5" />
+                          <span>{app}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Transparent Mapping Notice */}
+                  <p className="text-[11px] text-slate-400 italic pt-1 max-w-xl">
+                    {ind.disclaimer}
+                  </p>
+
                   {/* Action Bar */}
-                  <div className="pt-6 mt-6 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
+                  <div className="pt-4 flex flex-wrap items-center gap-4">
                     <Button 
                       to={`/contact?industry=${encodeURIComponent(ind.name)}`} 
                       variant="primary" 
@@ -127,38 +132,19 @@ export const Industries = () => {
                       Discuss {ind.name.split(' ')[0]} Requirements
                     </Button>
 
-                    <span className="text-xs text-slate-500 font-medium">
+                    <span className="text-xs text-slate-300 font-semibold">
                       Enterprise Feasibility Review
                     </span>
                   </div>
                 </div>
+              </div>
 
-                {/* Relevant Themed Domain Visual Panel */}
-                <div className={`lg:col-span-5 relative min-h-[280px] sm:min-h-[340px] lg:min-h-full overflow-hidden ${
-                  isReversed ? 'lg:order-1' : 'lg:order-2'
-                }`}>
-                  {/* Clean, Full-Resolution Relevant Domain Image */}
-                  <img
-                    src={ind.bgImage}
-                    alt={`${ind.name} Domain Visual`}
-                    className="w-full h-full object-cover object-left transition-transform duration-700 ease-out hover:scale-105"
-                    loading="lazy"
-                  />
-                  {/* Subtle corporate corner vignette for depth and elegance */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#17365D]/80 via-transparent to-black/20" />
-
-                  {/* Visual Overlay Tag */}
-                  <div className="absolute bottom-5 left-5 right-5 text-white">
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#17365D]/90 backdrop-blur-md border border-white/20 text-xs font-semibold text-white shadow-lg mb-1">
-                      <Sparkles className="w-3.5 h-3.5 text-[#267C78]" />
-                      <span>{ind.name.split('&')[0].trim()} Domain Visual</span>
-                    </div>
-                    <p className="text-[11px] text-slate-200 drop-shadow-sm">
-                      Distinct Systems Architectural Application Model
-                    </p>
-                  </div>
+              {/* Floating Bottom Right Badge */}
+              <div className="hidden lg:block absolute bottom-6 right-6 z-10">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0e223b]/90 backdrop-blur-md border border-white/20 text-xs font-semibold text-white shadow-lg">
+                  <Sparkles className="w-3.5 h-3.5 text-[#4dd0c9]" />
+                  <span>{ind.name.split('&')[0].trim()} Domain Architecture</span>
                 </div>
-
               </div>
             </div>
           );
