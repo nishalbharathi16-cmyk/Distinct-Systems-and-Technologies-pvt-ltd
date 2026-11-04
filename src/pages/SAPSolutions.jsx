@@ -19,10 +19,40 @@ import Button from '../components/Button';
 
 export const SAPSolutions = () => {
   return (
-    <div className="py-12 sm:py-16 space-y-16">
+    <div className="relative min-h-screen bg-[#061220] text-slate-100 py-12 sm:py-16 space-y-16 overflow-hidden">
+      
+      {/* 
+        Enterprise SAP Technical Background System:
+        1. Base deep night canvas (#061220)
+        2. High-precision cybernetic dot-grid & circuit lines
+        3. Faded SAP architecture blueprint watermark spanning the canvas
+        4. Atmospheric radial ambient glow orbs
+      */}
+      <div 
+        className="absolute inset-0 pointer-events-none z-0"
+        style={{
+          backgroundImage: `
+            radial-gradient(rgba(77, 208, 201, 0.12) 1px, transparent 1px),
+            radial-gradient(rgba(23, 54, 93, 0.35) 1px, transparent 1px)
+          `,
+          backgroundSize: '32px 32px, 64px 64px',
+          backgroundPosition: '0 0, 16px 16px'
+        }}
+      />
+
+      {/* Ambient SAP Architecture Watermark across upper background */}
+      <div 
+        className="absolute -top-10 left-0 right-0 h-[800px] bg-cover bg-center opacity-10 pointer-events-none mix-blend-luminosity filter blur-[0.5px]"
+        style={{ backgroundImage: `url('/services/sap-solutions-banner.jpg')` }}
+      />
+
+      {/* Atmospheric Radial Lighting Orbs */}
+      <div className="absolute top-10 left-1/4 w-[600px] h-[600px] bg-[#267C78]/15 rounded-full blur-[140px] pointer-events-none z-0" />
+      <div className="absolute top-1/2 -right-20 w-[700px] h-[700px] bg-[#17365D]/30 rounded-full blur-[160px] pointer-events-none z-0" />
+      <div className="absolute bottom-10 left-10 w-[650px] h-[650px] bg-[#0c2e56]/25 rounded-full blur-[150px] pointer-events-none z-0" />
 
       {/* 1. Header & Dedicated Enterprise SAP Hero */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="relative overflow-hidden rounded-2xl bg-[#0a1829] text-white p-8 sm:p-12 lg:p-16 shadow-2xl border border-slate-700/60 min-h-[480px] flex items-center group">
           {/* High-Resolution SAP Architecture Visual Background */}
           <div
@@ -68,11 +98,11 @@ export const SAPSolutions = () => {
       </section>
 
       {/* 2. SAP S/4HANA Modernization & Module Coverage Matrix */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-2xl border border-slate-700/60 bg-[#0a1829] shadow-2xl p-6 sm:p-10 lg:p-12 text-white">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="relative overflow-hidden rounded-2xl border border-slate-700/60 bg-[#0a1829] shadow-2xl p-6 sm:p-10 lg:p-12 text-white group">
           {/* Subtle Ambient Blueprint Graphic */}
           <div 
-            className="absolute inset-0 bg-cover bg-right opacity-15 pointer-events-none"
+            className="absolute inset-0 bg-cover bg-right opacity-20 pointer-events-none transition-transform duration-700 ease-out group-hover:scale-105"
             style={{ backgroundImage: `url('/services/sap-fiori-graphic.jpg')` }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0a1829] via-[#0a1829]/90 to-transparent pointer-events-none" />
@@ -192,10 +222,16 @@ export const SAPSolutions = () => {
       </section>
 
       {/* 3. SAP Implementation Lifecycle (5 Phases) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-2xl border border-slate-700/60 bg-[#0a1829] shadow-2xl p-6 sm:p-10 lg:p-12 text-white space-y-10">
-          
-          <div className="max-w-3xl space-y-3">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="relative overflow-hidden rounded-2xl border border-slate-700/60 bg-[#0a1829] shadow-2xl p-6 sm:p-10 lg:p-12 text-white space-y-10 group">
+          {/* Dedicated SAP Implementation Visual Background */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center opacity-20 pointer-events-none transition-transform duration-700 ease-out group-hover:scale-105"
+            style={{ backgroundImage: `url('/services/sap-implementation.jpg')` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1829] via-[#0a1829]/95 to-[#0a1829]/80 pointer-events-none" />
+
+          <div className="relative z-10 max-w-3xl space-y-3">
             <span className="text-xs font-bold uppercase tracking-wider text-[#4dd0c9] bg-[#267C78]/25 px-2.5 py-0.5 rounded-md border border-[#267C78]/40 inline-block">
               Implementation Methodology
             </span>
@@ -207,7 +243,7 @@ export const SAPSolutions = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
             
             {/* Phase 01 */}
             <div className="bg-white/5 backdrop-blur-md p-5 rounded-xl border border-white/10 hover:border-[#4dd0c9]/50 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
@@ -305,11 +341,11 @@ export const SAPSolutions = () => {
       </section>
 
       {/* 4. SAP Support Services & Maintenance Framework */}
-      <section id="support" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-2xl border border-slate-700/60 bg-[#0a1829] shadow-2xl p-6 sm:p-10 lg:p-12 text-white">
-          {/* Subtle Ambient Visual Background */}
+      <section id="support" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="relative overflow-hidden rounded-2xl border border-slate-700/60 bg-[#0a1829] shadow-2xl p-6 sm:p-10 lg:p-12 text-white group">
+          {/* Dedicated SAP Support Visual Background */}
           <div 
-            className="absolute inset-0 bg-cover bg-right opacity-15 pointer-events-none"
+            className="absolute inset-0 bg-cover bg-right opacity-20 pointer-events-none transition-transform duration-700 ease-out group-hover:scale-105"
             style={{ backgroundImage: `url('/services/sap-support.jpg')` }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0a1829] via-[#0a1829]/95 to-transparent pointer-events-none" />
