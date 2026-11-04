@@ -141,7 +141,7 @@ export const Industries = () => {
                   <img
                     src={ind.bgImage}
                     alt={`${ind.name} Domain Visual`}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105"
+                    className="w-full h-full object-cover object-left transition-transform duration-700 ease-out hover:scale-105"
                     loading="lazy"
                   />
                   {/* Subtle corporate corner vignette for depth and elegance */}

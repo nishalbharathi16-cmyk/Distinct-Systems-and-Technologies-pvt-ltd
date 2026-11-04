@@ -152,7 +152,7 @@ export const Services = () => {
                   <img
                     src={service.bgImage}
                     alt={`${service.title} Enterprise Practice Visual`}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105"
+                    className="w-full h-full object-cover object-left transition-transform duration-700 ease-out hover:scale-105"
                     loading="lazy"
                   />
                   {/* Subtle corporate corner vignette for depth and elegance */}

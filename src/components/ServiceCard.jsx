@@ -38,7 +38,7 @@ export const ServiceCard = ({ service, featured = false }) => {
             <img 
               src={service.bgImage} 
               alt={service.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              className="w-full h-full object-cover object-left group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#17365D]/90 via-[#17365D]/40 to-transparent" />
