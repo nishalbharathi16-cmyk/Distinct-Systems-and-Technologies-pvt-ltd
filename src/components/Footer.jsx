@@ -83,6 +83,7 @@ export const Footer = () => {
               <li><Link to="/services#data-science" className="hover:text-white transition-colors">Data Science & Analytics</Link></li>
               <li><Link to="/services#tech-consulting" className="hover:text-white transition-colors">Technology Consulting</Link></li>
               <li><Link to="/services#staff-augmentation" className="hover:text-white transition-colors">Staff Augmentation</Link></li>
+              <li><Link to="/services#education-tech" className="hover:text-white transition-colors">Education & Digital Learning</Link></li>
               <li><Link to="/sap-solutions" className="hover:text-white transition-colors">SAP S/4HANA Implementations</Link></li>
               <li><Link to="/sap-solutions#support" className="hover:text-white transition-colors">SAP Support & Maintenance</Link></li>
             </ul>

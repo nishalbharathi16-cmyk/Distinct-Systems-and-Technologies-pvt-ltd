@@ -7,6 +7,7 @@ import {
   Users2, 
   Layers, 
   ShieldCheck, 
+  GraduationCap,
   ArrowRight, 
   CheckCircle2, 
   Sparkles
@@ -22,6 +23,7 @@ const iconMap = {
   Users2,
   Layers,
   ShieldCheck,
+  GraduationCap,
 };
 
 export const Services = () => {
@@ -35,7 +37,7 @@ export const Services = () => {
             align="left"
             eyebrow="Practice Portfolio"
             title="Enterprise Technology & Consulting Services"
-            description="Six specialized practice areas delivering applied artificial intelligence, predictive analytics, enterprise architecture, and SAP implementations."
+            description="Specialized practice areas delivering applied artificial intelligence, predictive analytics, enterprise architecture, SAP implementations, and digital learning platforms."
           />
 
           {/* Quick Practice Navigation */}

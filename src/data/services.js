@@ -94,6 +94,22 @@ export const SERVICES = [
       "User enablement & continuous process tuning"
     ],
     cta: "Inquire About SAP Support SLAs"
+  },
+  {
+    id: "education-tech",
+    title: "Education & Digital Learning Systems",
+    shortDesc: "Data platforms, digital learning systems, and enterprise technical enablement solutions.",
+    businessValue: "Empowers institutions and enterprises with scalable digital learning architectures and data-driven learning analytics.",
+    icon: "GraduationCap",
+    bgImage: "/services/education.jpg",
+    tags: ["Learning Analytics", "Digital Platforms", "Technical Enablement"],
+    features: [
+      "Data platforms & institutional analytics pipelines",
+      "Digital learning systems & LMS/LXP architecture",
+      "Enterprise technical enablement & workshops",
+      "Automated credentials & performance tracking"
+    ],
+    cta: "Discuss Education & Training Solutions"
   }
 ];
 

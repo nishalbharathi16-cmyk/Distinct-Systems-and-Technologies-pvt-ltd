@@ -7,6 +7,7 @@ import {
   Users2, 
   Layers, 
   ShieldCheck, 
+  GraduationCap,
   ArrowRight, 
   CheckCircle2 
 } from 'lucide-react';
@@ -18,6 +19,7 @@ const iconMap = {
   Users2,
   Layers,
   ShieldCheck,
+  GraduationCap,
 };
 
 export const ServiceCard = ({ service, featured = false }) => {
