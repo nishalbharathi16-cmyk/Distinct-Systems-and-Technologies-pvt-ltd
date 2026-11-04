@@ -59,26 +59,35 @@ export const Services = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {SERVICES.map((service, index) => {
           const IconComponent = iconMap[service.icon] || Layers;
+          const isEducation = service.id === 'education-tech';
 
           return (
             <div
               key={service.id}
               id={service.id}
-              className="relative overflow-hidden rounded-2xl border border-slate-700/60 bg-[#0a1829] shadow-2xl transition-all duration-300 hover:shadow-card-hover group min-h-[500px] flex items-center"
+              className="relative overflow-hidden rounded-2xl border border-slate-700/60 bg-[#0a1829] shadow-2xl transition-all duration-300 hover:shadow-card-hover group min-h-[520px] flex items-center"
             >
               {/* 1. Full-Bleed High-Resolution Service Visual */}
               <div 
                 className={`absolute inset-0 bg-cover transition-transform duration-700 ease-out group-hover:scale-105 ${
-                  service.id === 'education-tech' ? 'bg-left' : 'bg-right md:bg-center'
+                  isEducation ? 'bg-left object-left' : 'bg-right md:bg-center'
                 }`}
                 style={{ backgroundImage: `url('${service.bgImage}')` }}
               />
 
-              {/* 2. Dark Ambient Frosted Glass Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0a1829]/95 via-[#0d2038]/90 md:via-[#0e223b]/80 to-black/40 md:to-transparent backdrop-blur-[2px] md:backdrop-blur-none" />
+              {/* 2. Dark Ambient Frosted Glass Overlay - Inverted for Education so Dr. Manimaran on left is 100% visible */}
+              <div 
+                className={`absolute inset-0 backdrop-blur-[1px] md:backdrop-blur-none ${
+                  isEducation
+                    ? 'bg-gradient-to-t from-[#0a1829]/95 via-[#0d2038]/80 to-transparent md:bg-gradient-to-l md:from-[#0a1829]/95 md:via-[#0d2038]/90 md:to-transparent'
+                    : 'bg-gradient-to-r from-[#0a1829]/95 via-[#0d2038]/90 md:via-[#0e223b]/80 to-black/40 md:to-transparent'
+                }`}
+              />
 
-              {/* 3. Text & Content Layer */}
-              <div className="relative z-10 w-full p-6 sm:p-10 lg:p-12 max-w-3xl">
+              {/* 3. Text & Content Layer - Positioned on right for Education so Dr. Manimaran on left is completely clear */}
+              <div className={`relative z-10 w-full p-6 sm:p-10 lg:p-12 ${
+                isEducation ? 'max-w-2xl ml-auto' : 'max-w-3xl'
+              }`}>
                 <div className="space-y-5">
                   {/* Header badge & title */}
                   <div className="flex items-center gap-3">
@@ -150,8 +159,10 @@ export const Services = () => {
                 </div>
               </div>
 
-              {/* Floating Bottom Right Badge */}
-              <div className="hidden lg:block absolute bottom-6 right-6 z-10">
+              {/* Floating Badge */}
+              <div className={`hidden lg:block absolute bottom-6 z-10 ${
+                isEducation ? 'left-6' : 'right-6'
+              }`}>
                 <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0e223b]/90 backdrop-blur-md border border-white/20 text-xs font-semibold text-white shadow-lg">
                   <Sparkles className="w-3.5 h-3.5 text-[#4dd0c9]" />
                   <span>{service.title.split('&')[0].trim()} Core Competency</span>
